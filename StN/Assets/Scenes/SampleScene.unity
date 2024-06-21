@@ -156,10 +156,14 @@ MonoBehaviour:
   - {fileID: 497875603748788289, guid: 2ce1163007ce58543bc34da5ff569b4f, type: 3}
   - {fileID: 497875603748788289, guid: 8edc8e69544dc004982bd517e88e9b3a, type: 3}
   Skeleton: {fileID: 1562102492}
-  checkerRadius: 0.1
+  checkerRadius: 0.2
   Maskaterenu:
     serializedVersion: 2
     m_Bits: 64
+  currentChunk: {fileID: 0}
+  spawnedChunks: []
+  Max: 50
+  czascooldown: 1
 --- !u!4 &355230713
 Transform:
   m_ObjectHideFlags: 0
@@ -502,6 +506,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton
       objectReference: {fileID: 0}
+    - target: {fileID: 185896729068688810, guid: 8090bae9724c2374eadcc815885ab3fc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Gracz
+      objectReference: {fileID: 0}
     - target: {fileID: 1929777005327444982, guid: 8090bae9724c2374eadcc815885ab3fc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -592,6 +601,11 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.016268581
       objectReference: {fileID: 0}
+    - target: {fileID: 7219419874029208424, guid: 8090bae9724c2374eadcc815885ab3fc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Gracz
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -608,12 +622,12 @@ PrefabInstance:
     - target: {fileID: 2356056064826701342, guid: 3d2ee59e39b2b7249b5b40441a4de469,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.28
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2356056064826701342, guid: 3d2ee59e39b2b7249b5b40441a4de469,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2356056064826701342, guid: 3d2ee59e39b2b7249b5b40441a4de469,
         type: 3}
