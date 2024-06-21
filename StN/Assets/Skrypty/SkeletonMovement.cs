@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class SkeletonMovement : MonoBehaviour
 {
 
     //Ruch naszej postaci
     public float Speed;
     Rigidbody2D rb;
-    Vector2 wstrone;
+    [HideInInspector]
+    public float OstatniaPozycjaHoryzontalna;
+    public float OstatniaPozycjaVertykalna;
+    [HideInInspector]
+    public Vector2 wstrone;
 
 
 
@@ -39,6 +43,16 @@ public class NewBehaviourScript : MonoBehaviour
         float ruchY = Input.GetAxisRaw("Vertical");
 
         wstrone = new Vector2(ruchX, ruchY).normalized;
+
+        //If do zaoamiêtania pozycji w jak¹ patrzy postaæ
+        if (wstrone.x != 0)
+        {
+            OstatniaPozycjaHoryzontalna = wstrone.x;
+        }
+        if (wstrone.y != 0)
+        {
+            OstatniaPozycjaVertykalna = wstrone.y;
+        }
 
     }
     
