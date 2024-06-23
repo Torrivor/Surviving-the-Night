@@ -1,5 +1,9 @@
 # Surviving-the-Night
 
+Version 0.08 - Ciężka kalibracja colliderów przedmiotów i szkieleta
+
+Version 0.07 - Naprawa SpawnMapy zakończona sukcesem
+
 Version 0.06 - SpawnMapy i randomowe obiekty
 
 Version 0.05 - Animacja postaci/rycerza + ruch kamery
