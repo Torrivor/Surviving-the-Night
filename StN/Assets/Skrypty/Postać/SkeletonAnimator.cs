@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class SkeletonAnimator : MonoBehaviour
@@ -9,12 +10,20 @@ public class SkeletonAnimator : MonoBehaviour
     Animator A;
     SkeletonMovement SK;
     SpriteRenderer SR;
-    
+
+    Transform attackPoint;
+    Vector3 attackPointRightPosition;
+    Vector3 attackPointLeftPosition;
+
     void Start()
     {
         A = GetComponent<Animator>();
         SK = GetComponent<SkeletonMovement>();
         SR = GetComponent<SpriteRenderer>();
+
+        attackPoint = transform.Find("Attack_Point");
+        attackPointRightPosition = attackPoint.localPosition;
+        attackPointLeftPosition = new Vector3(-attackPointRightPosition.x, attackPointRightPosition.y, attackPointRightPosition.z);
     }
 
     
@@ -37,12 +46,13 @@ public class SkeletonAnimator : MonoBehaviour
         if (SK.OstatniaPozycjaHoryzontalna < 0)
         {
             SR.flipX = true;
-            //this.GetComponentInChildren<CircleCollider2D>().offset = new Vector2(-0.13f, 0.019052f);
+            attackPoint.localPosition = attackPointLeftPosition;
         }
         else
         {
             SR.flipX = false;
             this.GetComponentInChildren<CircleCollider2D>().offset = new Vector2(-0.0700f, 0.019052f);
+            attackPoint.localPosition = attackPointRightPosition;
         }
 
     }

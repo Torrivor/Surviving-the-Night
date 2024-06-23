@@ -13,6 +13,8 @@ public class SkeletonMovement : MonoBehaviour
     public float OstatniaPozycjaVertykalna;
     [HideInInspector]
     public Vector2 wstrone;
+    [HideInInspector]
+    public Vector2 lastVector;
 
 
 
@@ -22,6 +24,7 @@ public class SkeletonMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        lastVector = new Vector2(1, 0f); //Utworzenie momentum broni przy starcie gry
 
     }
 
@@ -48,10 +51,16 @@ public class SkeletonMovement : MonoBehaviour
         if (wstrone.x != 0)
         {
             OstatniaPozycjaHoryzontalna = wstrone.x;
+            lastVector = new Vector2(OstatniaPozycjaHoryzontalna, 0f); //ostatni ruch x
         }
         if (wstrone.y != 0)
         {
             OstatniaPozycjaVertykalna = wstrone.y;
+            lastVector = new Vector2(0f,OstatniaPozycjaVertykalna); //ostatni ruch y
+        }
+        if (wstrone.x != 0 && wstrone.y != 0)
+        {
+            lastVector = new Vector2(OstatniaPozycjaHoryzontalna, OstatniaPozycjaVertykalna);  //Kiedy siê rusza
         }
 
     }

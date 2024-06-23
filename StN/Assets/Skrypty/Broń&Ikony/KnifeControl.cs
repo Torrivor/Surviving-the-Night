@@ -16,6 +16,6 @@ public class KnifeControl : Weapons
         base.Attack();
         GameObject spawnedKnife = Instantiate(prefab);
         spawnedKnife.transform.position = transform.position; //Ustawianie pozycji spawn knife 
-        spawnedKnife.GetComponent<KnifeZachowanie>().KierunekChecker(SM.wstrone); //Ustawianie pozycji knife po ruchu
+        spawnedKnife.GetComponent<KnifeZachowanie>().KierunekChecker(SM.lastVector); //Ustawianie pozycji knife po ruchu
     }
 }
