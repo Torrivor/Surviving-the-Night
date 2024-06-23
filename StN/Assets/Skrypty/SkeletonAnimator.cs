@@ -37,10 +37,12 @@ public class SkeletonAnimator : MonoBehaviour
         if (SK.OstatniaPozycjaHoryzontalna < 0)
         {
             SR.flipX = true;
+            //this.GetComponentInChildren<CircleCollider2D>().offset = new Vector2(-0.13f, 0.019052f);
         }
         else
         {
             SR.flipX = false;
+            this.GetComponentInChildren<CircleCollider2D>().offset = new Vector2(-0.0700f, 0.019052f);
         }
 
     }
