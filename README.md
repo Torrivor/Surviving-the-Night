@@ -1,4 +1,5 @@
 # Surviving-the-Night
+Version 0.09 - Dodanie assetów Broni, dodanie skryptów Broni oraz stworzenie Knife - do poprawy
 
 Version 0.08 - Ciężka kalibracja colliderów przedmiotów i szkieleta
 
