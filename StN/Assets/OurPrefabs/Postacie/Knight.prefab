@@ -349,11 +349,12 @@ GameObject:
   - component: {fileID: 8624026677850500351}
   - component: {fileID: 6492141489678423393}
   - component: {fileID: 7192999824816020704}
+  - component: {fileID: 5005571080289775236}
   - component: {fileID: 11499376841304104}
   - component: {fileID: 8406748795946039892}
   m_Layer: 0
   m_Name: Knight
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -446,7 +447,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6e21ab78be17d46944b1e126bc829a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 2
+  enemyData: {fileID: 11400000, guid: 424929678acca7049ad33beed4f6e096, type: 2}
+  Skeleton: {fileID: 0}
+  facingRight: 0
+--- !u!114 &5005571080289775236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2725158672590557474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b64c6ad35ae5f7245b445c69294977b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyData: {fileID: 11400000, guid: 424929678acca7049ad33beed4f6e096, type: 2}
 --- !u!58 &11499376841304104
 CircleCollider2D:
   m_ObjectHideFlags: 0

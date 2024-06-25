@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyScriptableObject : MonoBehaviour
+[CreateAssetMenu(fileName ="EnemyScriptableObject", menuName ="ScriptableObject/Enemy")]
+public class EnemyScriptableObject : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //Staty przeciwnikow
+    [SerializeField]
+    float moveSpeed;
+    public float MoveSpeed { get => moveSpeed; private set =>moveSpeed = value; }
+    [SerializeField]
+    float maxHP;
+    public float MaxHP { get => maxHP; private set => maxHP = value; }
+    [SerializeField]
+    float damage;
+    public float Damage { get => damage; private set => damage = value; }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

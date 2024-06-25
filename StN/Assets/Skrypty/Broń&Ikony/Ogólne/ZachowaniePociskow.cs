@@ -9,7 +9,22 @@ public class ZachowaniePociskow : MonoBehaviour
     //Ustaw w prefabie broni pociskowej
     protected Vector3 kierunki;
     public float ZniszczPoSekundzie;
-    
+
+    //Obecne staty
+    protected float currentDamage;
+    protected float currentSpeed;
+    protected float currentCooldownofweapon;
+    protected int currentWytrzymalocs;
+
+    private void Awake()
+    {
+        currentDamage = weaponData.Damage;
+        currentSpeed = weaponData.Speed;
+        currentCooldownofweapon = weaponData.Cooldownofweapon;
+        currentWytrzymalocs = weaponData.Wytrzymalosc;
+    }
+
+
     protected virtual void Start()
     {
         Destroy(gameObject, ZniszczPoSekundzie);
@@ -60,5 +75,14 @@ public class ZachowaniePociskow : MonoBehaviour
         }
         transform.localScale = skala;
         transform.rotation = Quaternion.Euler(rotacja);
+    }
+
+    protected virtual void OnTriggerEnter2D(Collider2D col)
+    {
+        //gdy kolizja zadaj obrazenia
+        if(col.CompareTag("Enemy"))
+        { EnemyStats enemy = col.GetComponent<EnemyStats>();
+            enemy.TakeDamage(currentDamage);
+        }
     }
 }
