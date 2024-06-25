@@ -544,6 +544,16 @@ PrefabInstance:
     - target: {fileID: 7192999824816020704, guid: 3d2ee59e39b2b7249b5b40441a4de469,
         type: 3}
       propertyPath: Speed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7192999824816020704, guid: 3d2ee59e39b2b7249b5b40441a4de469,
+        type: 3}
+      propertyPath: Skeleton
+      value: 
+      objectReference: {fileID: 2556789336606631288}
+    - target: {fileID: 7192999824816020704, guid: 3d2ee59e39b2b7249b5b40441a4de469,
+        type: 3}
+      propertyPath: facingRight
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7890906894202606365, guid: 3d2ee59e39b2b7249b5b40441a4de469,

@@ -1,19 +1,43 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    Transform Skeleton;
+    public GameObject Skeleton;
     public float Speed;
+    private SpriteRenderer spriteRenderer;
+    private Vector3 initialPosition;
+    public bool facingRight = false;
     void Start()
     {
-        Skeleton = FindObjectOfType<SkeletonMovement>().transform;
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        initialPosition = transform.position;
     }
 
-    
+
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, Skeleton.transform.position, Speed * Time.deltaTime);
+        Vector3 playerPosition = FindObjectOfType<SkeletonMovement>().transform.position;
+        transform.position = Vector2.MoveTowards(transform.position, playerPosition, Speed * Time.deltaTime);
+
+        if(Skeleton.transform.position.x < gameObject.transform.position.x && facingRight)
+        {
+            FlipPos();
+        }
+        if (Skeleton.transform.position.x > gameObject.transform.position.x && !facingRight)
+        {
+            FlipPos();
+        }
+           
+    }
+
+    void FlipPos()
+    {
+        facingRight = !facingRight;
+        Vector3 tmpScale = gameObject.transform.localScale;
+        tmpScale.x *= -1;
+        gameObject.transform.localScale = tmpScale;
     }
 }
