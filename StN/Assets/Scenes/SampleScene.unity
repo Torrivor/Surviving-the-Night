@@ -714,6 +714,12 @@ PrefabInstance:
       propertyPath: enemyLayers.m_Bits
       value: 128
       objectReference: {fileID: 0}
+    - target: {fileID: 2820978713122067572, guid: 8090bae9724c2374eadcc815885ab3fc,
+        type: 3}
+      propertyPath: weaponData
+      value: 
+      objectReference: {fileID: 11400000, guid: 41e80e56d155175498ce8c7a6fb24a62,
+        type: 2}
     - target: {fileID: 3614980149915812141, guid: 8090bae9724c2374eadcc815885ab3fc,
         type: 3}
       propertyPath: m_Name

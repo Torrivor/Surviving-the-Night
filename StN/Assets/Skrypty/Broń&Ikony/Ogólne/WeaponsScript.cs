@@ -6,19 +6,15 @@ public class Weapons : MonoBehaviour
 {
     //Skrypt dla wszystkich broni
     [Header("Statystyki Broni")]
-    public GameObject prefab;
-    public float dmg;
-    public float speed;
-    public float Cooldownofweapon;
+    public WeaponsScriptableObject weaponData;
     float currentCooldown;
-    public int wytrzymalosc;
 
     protected SkeletonMovement SM;
 
     protected virtual void Start()
     {
         SM = FindObjectOfType<SkeletonMovement>();
-        currentCooldown = Cooldownofweapon; 
+        currentCooldown = weaponData.Cooldownofweapon; 
     }
 
    
@@ -32,6 +28,6 @@ public class Weapons : MonoBehaviour
     }
     protected virtual void Attack()
     {
-        currentCooldown = Cooldownofweapon;
+        currentCooldown = weaponData.Cooldownofweapon;
     }
 }
