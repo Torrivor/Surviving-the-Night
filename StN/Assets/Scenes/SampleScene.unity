@@ -421,6 +421,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11499376841304104, guid: 3d2ee59e39b2b7249b5b40441a4de469,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 141214337147539804, guid: 3d2ee59e39b2b7249b5b40441a4de469,
         type: 3}
       propertyPath: m_Layer
@@ -501,6 +506,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2725158672590557474, guid: 3d2ee59e39b2b7249b5b40441a4de469,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3755147319869219698, guid: 3d2ee59e39b2b7249b5b40441a4de469,
         type: 3}
       propertyPath: m_SortingLayer
@@ -551,6 +561,12 @@ PrefabInstance:
       propertyPath: Skeleton
       value: 
       objectReference: {fileID: 2556789336606631288}
+    - target: {fileID: 7192999824816020704, guid: 3d2ee59e39b2b7249b5b40441a4de469,
+        type: 3}
+      propertyPath: enemyData
+      value: 
+      objectReference: {fileID: 11400000, guid: 424929678acca7049ad33beed4f6e096,
+        type: 2}
     - target: {fileID: 7192999824816020704, guid: 3d2ee59e39b2b7249b5b40441a4de469,
         type: 3}
       propertyPath: facingRight

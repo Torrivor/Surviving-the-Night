@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd7b6af6aac76af40a6b0b2e90c5284c, type: 3}
-  m_Name: Knife Weapon
+  m_Script: {fileID: 11500000, guid: a712b4cda3e5d544eb00fbfdee3424f9, type: 3}
+  m_Name: EnemyScriptableObject 3
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3440696189087828352, guid: 5c2d3d32c57da4245bd229aecf2d02cf, type: 3}
-  dmg: 0
-  speed: 10
-  Cooldownofweapon: 2
-  wytrzymalosc: 0
+  moveSpead: 0
+  maxHP: 0
+  damage: 0

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Gracz
+  - Enemy
   layers:
   - Default
   - TransparentFX

@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    public EnemyScriptableObject enemyData;
     public GameObject Skeleton;
-    public float Speed;
     private SpriteRenderer spriteRenderer;
     private Vector3 initialPosition;
     public bool facingRight = false;
@@ -20,7 +20,7 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         Vector3 playerPosition = FindObjectOfType<SkeletonMovement>().transform.position;
-        transform.position = Vector2.MoveTowards(transform.position, playerPosition, Speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, playerPosition, enemyData.MoveSpeed * Time.deltaTime);
 
         if(Skeleton.transform.position.x < gameObject.transform.position.x && facingRight)
         {
