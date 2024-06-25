@@ -541,6 +541,11 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -1869315837
       objectReference: {fileID: 0}
+    - target: {fileID: 7192999824816020704, guid: 3d2ee59e39b2b7249b5b40441a4de469,
+        type: 3}
+      propertyPath: Speed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7890906894202606365, guid: 3d2ee59e39b2b7249b5b40441a4de469,
         type: 3}
       propertyPath: m_Layer
@@ -578,6 +583,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Terrain Chunk
+      objectReference: {fileID: 0}
+    - target: {fileID: 2904450687075198783, guid: c5d8331a24db25546923fec5efd74390,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2956971196461534705, guid: c5d8331a24db25546923fec5efd74390,
         type: 3}
@@ -758,6 +768,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.265
+      objectReference: {fileID: 0}
+    - target: {fileID: 6895483309860783163, guid: 8090bae9724c2374eadcc815885ab3fc,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7629275043153713015, guid: 8090bae9724c2374eadcc815885ab3fc,
         type: 3}
