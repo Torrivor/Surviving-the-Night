@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ZachowaniePociskow : MonoBehaviour
 {
+    public WeaponsScriptableObject weaponData;
+
     //Ustaw w prefabie broni pociskowej
     protected Vector3 kierunki;
     public float ZniszczPoSekundzie;

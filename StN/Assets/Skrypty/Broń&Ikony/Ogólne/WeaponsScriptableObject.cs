@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu]
+[CreateAssetMenu(fileName ="WeaponScriptableObjesc", menuName ="ScriptableObjects/Weapons")]
 public class WeaponsScriptableObject : ScriptableObject
 {
     public GameObject prefab;
