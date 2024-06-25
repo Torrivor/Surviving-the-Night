@@ -581,6 +581,65 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d2ee59e39b2b7249b5b40441a4de469, type: 3}
+--- !u!1 &1867394639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1867394641}
+  - component: {fileID: 1867394640}
+  m_Layer: 0
+  m_Name: Enemy Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1867394640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867394639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d027a5119df2aa4782d59ef61ce093b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - NazwaFali: Fala 1
+    enemyGroups:
+    - EnemyName: 
+      EnemyCount: 3
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 0}
+    - EnemyName: 
+      EnemyCount: 2
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 0}
+    FalaQuota: 0
+    spawnIntereval: 0
+    spawnCount: 0
+  obecnaFala: 0
+--- !u!4 &1867394641
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867394639}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1301406074723247001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -810,3 +869,4 @@ SceneRoots:
   - {fileID: 1301406074723247001}
   - {fileID: 355230713}
   - {fileID: 1528871674}
+  - {fileID: 1867394641}
