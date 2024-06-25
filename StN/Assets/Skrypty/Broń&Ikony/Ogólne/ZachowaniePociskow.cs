@@ -83,6 +83,16 @@ public class ZachowaniePociskow : MonoBehaviour
         if(col.CompareTag("Enemy"))
         { EnemyStats enemy = col.GetComponent<EnemyStats>();
             enemy.TakeDamage(currentDamage);
+            ZmniejszWytrzymalosc();
+        }
+    }
+
+    void ZmniejszWytrzymalosc() //niszczy pocisk gdy wytrzymalosc spada do 0
+    {
+        currentWytrzymalocs--;
+        if(currentWytrzymalocs <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 }
