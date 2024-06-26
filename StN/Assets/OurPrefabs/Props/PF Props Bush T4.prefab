@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 24602860699457915}
   - component: {fileID: -62888857973397918}
   - component: {fileID: -4650654617945638443}
+  - component: {fileID: -7194173373952224064}
+  - component: {fileID: 5972256167027905696}
   m_Layer: 20
   m_Name: PF Props Bush T4
   m_TagString: Untagged
@@ -149,6 +151,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-7194173373952224064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8738756237913483755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838c133f6237eda498bb27f0dea19184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drops:
+  - name: HP
+    itemPrefab: {fileID: 4631913718623862113, guid: 91f8480c3e97282488719c2b92088ccd,
+      type: 3}
+    dropRate: 15
+--- !u!114 &5972256167027905696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8738756237913483755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6d6d1e4a4ce64b4193fd191703cf6cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
 --- !u!1 &9152462459586346546
 GameObject:
   m_ObjectHideFlags: 0

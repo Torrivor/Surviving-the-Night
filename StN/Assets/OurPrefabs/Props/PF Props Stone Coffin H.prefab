@@ -317,7 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6d6d1e4a4ce64b4193fd191703cf6cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 300
+  health: 100
 --- !u!114 &8126097744963864471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,4 +334,4 @@ MonoBehaviour:
   - name: HP
     itemPrefab: {fileID: 4631913718623862113, guid: 91f8480c3e97282488719c2b92088ccd,
       type: 3}
-    dropRate: 70
+    dropRate: 90

@@ -263,6 +263,8 @@ GameObject:
   - component: {fileID: 2318990867468655529}
   - component: {fileID: 6459996966316578745}
   - component: {fileID: -3708293607526815267}
+  - component: {fileID: 5983938348117612199}
+  - component: {fileID: 4447308574339394883}
   m_Layer: 20
   m_Name: PF Props Tree T1
   m_TagString: Untagged
@@ -365,3 +367,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5983938348117612199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8854547078548550955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838c133f6237eda498bb27f0dea19184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drops:
+  - name: HP
+    itemPrefab: {fileID: 4631913718623862113, guid: 91f8480c3e97282488719c2b92088ccd,
+      type: 3}
+    dropRate: 75
+--- !u!114 &4447308574339394883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8854547078548550955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6d6d1e4a4ce64b4193fd191703cf6cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 75
