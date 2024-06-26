@@ -560,7 +560,7 @@ MonoBehaviour:
   - name: Exp ore 1
     itemPrefab: {fileID: 2676791569975515585, guid: bdb41e484d320f848ac2cc4250505d83,
       type: 3}
-    dropRate: 50
+    dropRate: 100
 --- !u!1 &5804212533380196763
 GameObject:
   m_ObjectHideFlags: 0

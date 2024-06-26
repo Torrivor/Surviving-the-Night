@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 4600829744603536668}
   - component: {fileID: 1509254930524609605}
   - component: {fileID: 2140041536750016295}
+  - component: {fileID: 3359549753233004847}
+  - component: {fileID: 2615924033615176654}
   m_Layer: 21
   m_Name: Skeleton
   m_TagString: Gracz
@@ -112,11 +114,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c78a942c5379e9f4aa3715488a74e1c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
   OstatniaPozycjaHoryzontalna: 0
   OstatniaPozycjaVertykalna: 0
   wstrone: {x: 0, y: 0}
   lastVector: {x: 0, y: 0}
+  characterData: {fileID: 11400000, guid: 7d85d1ac2db6fa34db376b722c961756, type: 2}
 --- !u!114 &1509254930524609605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 5996535161356216385}
   Attack_Point: {fileID: 5489717108813643418}
-  attackRange: 0.53
+  boxSize: {x: 1, y: 0.5}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -188,6 +190,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &3359549753233004847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3614980149915812141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 221d9d81da7533746b6e751b089059e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2615924033615176654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3614980149915812141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae2f6ea60ac132f48a601ffb627bfa6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterData: {fileID: 11400000, guid: 7d85d1ac2db6fa34db376b722c961756, type: 2}
+  experience: 0
+  level: 1
+  experienceCap: 0
+  levelRanges:
+  - startLevel: 1
+    endLevel: 3
+    experienceCapIncrease: 150
+  - startLevel: 4
+    endLevel: 7
+    experienceCapIncrease: 300
 --- !u!1 &7629275043153713015
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,11 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5779550c3fb76fd4fb602820decd0d55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3440696189087828352, guid: 5c2d3d32c57da4245bd229aecf2d02cf, type: 3}
-  dmg: 0
-  speed: 10
-  Cooldownofweapon: 2
-  wytrzymalosc: 0
+  weaponData: {fileID: 0}
 --- !u!1 &8468667587781650773
 GameObject:
   m_ObjectHideFlags: 0
