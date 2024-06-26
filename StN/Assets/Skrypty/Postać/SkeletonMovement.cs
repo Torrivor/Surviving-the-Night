@@ -6,8 +6,6 @@ public class SkeletonMovement : MonoBehaviour
 {
 
     //Ruch naszej postaci
-    public float Speed;
-    Rigidbody2D rb;
     [HideInInspector]
     public float OstatniaPozycjaHoryzontalna;
     public float OstatniaPozycjaVertykalna;
@@ -17,7 +15,8 @@ public class SkeletonMovement : MonoBehaviour
     public Vector2 lastVector;
 
 
-
+    Rigidbody2D rb;
+    public CharacterScriptableObject characterData;
 
 
     // Start is called before the first frame update
@@ -68,7 +67,7 @@ public class SkeletonMovement : MonoBehaviour
     void Ruch()
     {
         //prêdkoœæ poruszania
-        rb.velocity = new Vector2 (wstrone.x * Speed, wstrone.y * Speed);
+        rb.velocity = new Vector2 (wstrone.x * characterData.MoveSpeed, wstrone.y * characterData.MoveSpeed);
 
     }
 
