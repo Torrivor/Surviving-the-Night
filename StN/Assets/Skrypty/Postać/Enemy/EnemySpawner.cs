@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static EnemySpawner;
+
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -41,16 +41,16 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {
-        Skeleton = FindObjectOfType<SkeletonMovement>().transform; //Do poprawy SkeletonMovement
+        Skeleton = FindObjectOfType<SkeletonMovement>().transform; 
         CalculateWaveQuota();
         PierwszaFala();
     }
 
-   
+
     void Update()
     {
 
-        if(obecnaFala < waves.Count && waves[obecnaFala].spawnCount == 0) //Sprawdzanie czy fala siê zakoñczy³a i  czy nastêpna ma siê rozpocz¹æ
+        if (obecnaFala < waves.Count && waves[obecnaFala].spawnCount == 0) //Sprawdzanie czy fala siê zakoñczy³a i  czy nastêpna ma siê rozpocz¹æ
         {
             StartCoroutine(NastepnaFala());
         }
@@ -69,7 +69,7 @@ public class EnemySpawner : MonoBehaviour
         yield return new WaitForSeconds(waveInterval);
 
         //je¿eli jest wiêcej fal po obecnej fali, przejdŸ do nastêpnej fali
-        if (obecnaFala < waves.Count -1)
+        if (obecnaFala < waves.Count - 1)
         {
             obecnaFala++;
             CalculateWaveQuota();
@@ -78,14 +78,14 @@ public class EnemySpawner : MonoBehaviour
 
     void CalculateWaveQuota()
     {
-        int obecnaFala = 0;
+        int totalQuota = 0;
         foreach (var GrupaEnemy in waves[obecnaFala].enemyGroups)
         {
-            obecnaFala += GrupaEnemy.EnemyCount;
+            totalQuota += GrupaEnemy.EnemyCount;
         }
 
-        waves[obecnaFala].FalaQuota = obecnaFala;
-        Debug.LogWarning(obecnaFala);
+        waves[obecnaFala].FalaQuota = totalQuota;
+        Debug.LogWarning(totalQuota);
     }
     void SpawnEnemies()
     {
@@ -95,20 +95,36 @@ public class EnemySpawner : MonoBehaviour
         {
             return;
         }
+
+        bool enemiesSpawnedThisCycle = false;
         //Spawn ka¿dy typ przeciwnika dopóki quota jest pe³na
         foreach (var GrupaEnemy in waves[obecnaFala].enemyGroups)
-            {
+        {
             //Czy minimum przeciwników siê zespawni³o?
-            while (waves[obecnaFala].spawnCount < waves[obecnaFala].FalaQuota)
+            while (GrupaEnemy.SpawnCount < GrupaEnemy.EnemyCount && waves[obecnaFala].spawnCount < waves[obecnaFala].FalaQuota && !maxenenmiesReached)
             {
                 Instantiate(GrupaEnemy.enemyPrefabs, Skeleton.position + relativeSpawnPoints[Random.Range(0, relativeSpawnPoints.Count)].position, Quaternion.identity);
                 GrupaEnemy.SpawnCount++;
                 waves[obecnaFala].spawnCount++;
                 enemiesAlive++;
+
+                if (enemiesAlive >= maxEnemies)
+                {
+                    maxenenmiesReached = true;
+                    return;
+                }
             }
+            if (maxenenmiesReached)
+            {
+                break;
+            }
+            if (!enemiesSpawnedThisCycle)
+            {
+                maxenenmiesReached = false;
             }
         }
-    
+    }
+
 
     public void OnEnemyKilled()
     {
