@@ -16,4 +16,4 @@ MonoBehaviour:
   damage: 5
   speed: 10
   cooldownofweapon: 2
-  wytrzymalosc: 0
+  wytrzymalosc: 1
