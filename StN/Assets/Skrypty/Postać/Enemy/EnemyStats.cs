@@ -7,10 +7,28 @@ public class EnemyStats : MonoBehaviour
     public EnemyScriptableObject enemyData;
 
     //Obecne staty
+    [HideInInspector]
     float currentMoveSpeed;
+    [HideInInspector]
     float currentHP;
+    [HideInInspector]
     float currentDamage;
 
+    public float despawnDistance = 20f;
+    Transform Skeleton;
+
+    private void Start()
+    {
+        Skeleton = FindObjectOfType<PlayerStats>().transform;
+    }
+
+    private void Update()
+    {
+        if (Vector2.Distance(transform.position, Skeleton.position) >= despawnDistance)
+        {
+            ReturnEnemy();
+        }
+    }
     void Awake()
     {
         currentMoveSpeed = enemyData.MoveSpeed;
@@ -42,5 +60,11 @@ public class EnemyStats : MonoBehaviour
             PlayerStats player = col.gameObject.GetComponent<PlayerStats>();
             player.TakeDamage(currentMoveSpeed);
         }
+    }
+
+    void ReturnEnemy()
+    {
+        EnemySpawner ES = FindObjectOfType<EnemySpawner>();
+        transform.position = Skeleton.position + ES.relativeSpawnPoints[Random.Range(0, ES.relativeSpawnPoints.Count)].position;
     }
 }
