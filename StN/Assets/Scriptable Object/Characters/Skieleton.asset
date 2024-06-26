@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Skieleton
   m_EditorClassIdentifier: 
   startingWeapon: {fileID: 0}
-  maxHP: 0
+  maxHP: 100
   recovery: 0
   moveSpeed: 5
   might: 0

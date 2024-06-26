@@ -100,7 +100,7 @@ GameObject:
   - component: {fileID: -3263269063760593806}
   m_Layer: 20
   m_Name: PF Props Well
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

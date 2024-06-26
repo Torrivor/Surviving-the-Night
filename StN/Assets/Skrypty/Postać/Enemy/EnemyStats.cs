@@ -37,7 +37,7 @@ public class EnemyStats : MonoBehaviour
     private void OnCollisionStay2D(Collision2D col)
     {
         //odniesienie do skryptu z kolizjami i dostaje dmg -TakeDamage()
-        if(col.gameObject.CompareTag("Player"))
+        if(col.gameObject.CompareTag("Gracz"))
         {
             PlayerStats player = col.gameObject.GetComponent<PlayerStats>();
             player.TakeDamage(currentMoveSpeed);

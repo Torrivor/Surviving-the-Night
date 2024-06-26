@@ -85,6 +85,14 @@ public class ZachowaniePociskow : MonoBehaviour
             enemy.TakeDamage(currentDamage);
             ZmniejszWytrzymalosc();
         }
+        else if (col.CompareTag("Prop"))
+        {
+            if(col.gameObject.TryGetComponent(out BreakableProps breakable))
+            {
+                breakable.TakeDamage(currentDamage);
+                ZmniejszWytrzymalosc();
+            }
+        }
     }
 
     void ZmniejszWytrzymalosc() //niszczy pocisk gdy wytrzymalosc spada do 0

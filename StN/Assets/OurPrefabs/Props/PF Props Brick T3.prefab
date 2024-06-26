@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: -1530837460752834629}
   m_Layer: 20
   m_Name: PF Props Brick T3
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
