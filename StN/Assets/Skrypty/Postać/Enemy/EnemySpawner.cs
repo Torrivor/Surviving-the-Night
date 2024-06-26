@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static EnemySpawner;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -26,19 +27,53 @@ public class EnemySpawner : MonoBehaviour
     public List<Fale> waves; //Lista wszystkich fal gier
     public int obecnaFala;
 
+    [Header("Atrybuty Spawnera")]
+    float SpawnTimer;
+    public float waveInterval; //okres pomiêdzy falami
+    public int enemiesAlive;
+    public int maxEnemies;
+    public bool maxenenmiesReached = false; //czy jest max?
+
+    [Header("Spawner Positions")]
+    public List<Transform> relativeSpawnPoints;
+
     Transform Skeleton;
 
     void Start()
     {
-        Skeleton = FindObjectOfType<SkeletonMovement>().transform;
+        Skeleton = FindObjectOfType<SkeletonMovement>().transform; //Do poprawy SkeletonMovement
         CalculateWaveQuota();
-        SpawnEnemies();
+        PierwszaFala();
     }
 
    
     void Update()
     {
-        
+
+        if(obecnaFala < waves.Count && waves[obecnaFala].spawnCount == 0) //Sprawdzanie czy fala siê zakoñczy³a i  czy nastêpna ma siê rozpocz¹æ
+        {
+            StartCoroutine(NastepnaFala());
+        }
+
+        SpawnTimer += Time.deltaTime;
+
+        if (SpawnTimer >= waves[obecnaFala].spawnIntereval)
+        {
+            SpawnTimer = 0f;
+            SpawnEnemies();
+        }
+    }
+    IEnumerator NastepnaFala()
+    {
+        //okres pomiêdzy falami
+        yield return new WaitForSeconds(waveInterval);
+
+        //je¿eli jest wiêcej fal po obecnej fali, przejdŸ do nastêpnej fali
+        if (obecnaFala < waves.Count -1)
+        {
+            obecnaFala++;
+            CalculateWaveQuota();
+        }
     }
 
     void CalculateWaveQuota()
@@ -54,22 +89,39 @@ public class EnemySpawner : MonoBehaviour
     }
     void SpawnEnemies()
     {
-        //Sprawdzanie czy minimalna iloœæ przeciwników w fali siê zespawni³o
-        if (waves[obecnaFala].spawnCount < waves[obecnaFala].FalaQuota)
-        {
-            //Spawn ka¿dy typ przeciwnika dopóki quota jest pe³na
-            foreach (var GrupaEnemy in waves[obecnaFala].enemyGroups)
-            {
-                //Czy minimum przeciwników siê zespawni³o?
-                if (GrupaEnemy.SpawnCount < GrupaEnemy.EnemyCount)
-                {
-                    Vector2 SpawnPosition = new Vector2(Skeleton.transform.position.x + Random.Range(-10f, 10f), Skeleton.transform.position.y + Random.Range(-10f, 10f));
-                    Instantiate(GrupaEnemy.enemyPrefabs, SpawnPosition, Quaternion.identity);
 
-                    GrupaEnemy.SpawnCount++;
-                    waves[obecnaFala].spawnCount++;
-                }
+        //Sprawdzanie czy minimalna iloœæ przeciwników w fali siê zespawni³o
+        if (maxenenmiesReached)
+        {
+            return;
+        }
+        //Spawn ka¿dy typ przeciwnika dopóki quota jest pe³na
+        foreach (var GrupaEnemy in waves[obecnaFala].enemyGroups)
+            {
+            //Czy minimum przeciwników siê zespawni³o?
+            while (waves[obecnaFala].spawnCount < waves[obecnaFala].FalaQuota)
+            {
+                Instantiate(GrupaEnemy.enemyPrefabs, Skeleton.position + relativeSpawnPoints[Random.Range(0, relativeSpawnPoints.Count)].position, Quaternion.identity);
+                GrupaEnemy.SpawnCount++;
+                waves[obecnaFala].spawnCount++;
+                enemiesAlive++;
+            }
             }
         }
+    
+
+    public void OnEnemyKilled()
+    {
+        enemiesAlive--;
+    }
+
+    void PierwszaFala()
+    {
+        if (obecnaFala < waves.Count && waves[obecnaFala].spawnCount == 0)
+        {
+            StartCoroutine(NastepnaFala());
+        }
+        SpawnTimer = 0f;
+        SpawnEnemies();
     }
 }

@@ -29,6 +29,9 @@ public class EnemyStats : MonoBehaviour
 
     public void Kill()
     {
+        EnemySpawner ES = FindObjectOfType<EnemySpawner>();
+        ES.OnEnemyKilled();
         Destroy(gameObject);
     }
+
 }

@@ -476,6 +476,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Priest
       objectReference: {fileID: 0}
+    - target: {fileID: 8049427230744103732, guid: db43ad74677b0e44e83c4cf5fcf4e0c6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -493,6 +498,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Soldier
+      objectReference: {fileID: 0}
+    - target: {fileID: 651668938019806308, guid: c28a66748acd3ce408548fe0e7df0d6d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7383995658066263208, guid: c28a66748acd3ce408548fe0e7df0d6d,
         type: 3}
@@ -644,6 +654,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2725158672590557474, guid: 3d2ee59e39b2b7249b5b40441a4de469,
         type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2725158672590557474, guid: 3d2ee59e39b2b7249b5b40441a4de469,
+        type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
@@ -765,18 +780,24 @@ MonoBehaviour:
   waves:
   - NazwaFali: Fala 1
     enemyGroups:
-    - EnemyName: 
+    - EnemyName: Knight
       EnemyCount: 3
       SpawnCount: 0
-      enemyPrefabs: {fileID: 0}
-    - EnemyName: 
+      enemyPrefabs: {fileID: 2725158672590557474, guid: 3d2ee59e39b2b7249b5b40441a4de469,
+        type: 3}
+    - EnemyName: Peasant
       EnemyCount: 2
       SpawnCount: 0
-      enemyPrefabs: {fileID: 0}
+      enemyPrefabs: {fileID: 5150781104156124289, guid: c398f531ded992442af0154e7c6b6ac8,
+        type: 3}
     FalaQuota: 0
-    spawnIntereval: 0
+    spawnIntereval: 1
     spawnCount: 0
   obecnaFala: 0
+  waveInterval: 3
+  enemiesAlive: 0
+  maxEnemies: 0
+  maxenenmiesReached: 0
 --- !u!4 &1867394641
 Transform:
   m_ObjectHideFlags: 0
@@ -804,6 +825,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Peasant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5150781104156124289, guid: c398f531ded992442af0154e7c6b6ac8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5150781104156124289, guid: c398f531ded992442af0154e7c6b6ac8,
         type: 3}
@@ -1090,11 +1116,11 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
+  - {fileID: 1867394641}
   - {fileID: 3323312983672540986}
   - {fileID: 1301406074723247001}
   - {fileID: 355230713}
   - {fileID: 1528871674}
-  - {fileID: 1867394641}
   - {fileID: 2085609054}
   - {fileID: 1051362365}
   - {fileID: 1433876588}
