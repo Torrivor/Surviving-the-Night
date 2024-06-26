@@ -352,6 +352,7 @@ GameObject:
   - component: {fileID: 5005571080289775236}
   - component: {fileID: 11499376841304104}
   - component: {fileID: 8406748795946039892}
+  - component: {fileID: 3582578694840338327}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Enemy
@@ -543,6 +544,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6176593, y: 1.238963}
   m_EdgeRadius: 0
+--- !u!114 &3582578694840338327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2725158672590557474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838c133f6237eda498bb27f0dea19184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drops:
+  - name: Exp ore 1
+    itemPrefab: {fileID: 2676791569975515585, guid: bdb41e484d320f848ac2cc4250505d83,
+      type: 3}
+    dropRate: 50
 --- !u!1 &5804212533380196763
 GameObject:
   m_ObjectHideFlags: 0
