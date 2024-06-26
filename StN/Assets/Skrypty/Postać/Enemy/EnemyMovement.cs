@@ -14,6 +14,7 @@ public class EnemyMovement : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         initialPosition = transform.position;
+        Skeleton = FindObjectOfType<SkeletonMovement>().gameObject;  //Proces szkieleta/zamieniæ na wszystkich graczy
     }
 
 
