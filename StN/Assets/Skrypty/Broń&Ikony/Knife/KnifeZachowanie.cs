@@ -12,6 +12,6 @@ public class KnifeZachowanie : ZachowaniePociskow
     
     void Update()
     {
-        transform.position += kierunki * weaponData.Speed * Time.deltaTime;  //Ustawianie ruchu knife
+        transform.position += kierunki * currentSpeed * Time.deltaTime;  //Ustawianie ruchu knife
     }
 }

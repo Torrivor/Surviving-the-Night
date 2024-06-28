@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 4600829744603536668}
   - component: {fileID: 1509254930524609605}
   - component: {fileID: 2140041536750016295}
-  - component: {fileID: 3359549753233004847}
   - component: {fileID: 2615924033615176654}
   m_Layer: 21
   m_Name: Skeleton
@@ -40,6 +39,7 @@ Transform:
   - {fileID: 7130728103619900920}
   - {fileID: 2192462516846237872}
   - {fileID: 5489717108813643418}
+  - {fileID: 4033279881491985300}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &6895483309860783163
@@ -118,7 +118,6 @@ MonoBehaviour:
   OstatniaPozycjaVertykalna: 0
   wstrone: {x: 0, y: 0}
   lastVector: {x: 0, y: 0}
-  characterData: {fileID: 11400000, guid: 7d85d1ac2db6fa34db376b722c961756, type: 2}
 --- !u!114 &1509254930524609605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,18 +189,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!114 &3359549753233004847
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3614980149915812141}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 221d9d81da7533746b6e751b089059e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2615924033615176654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,6 +202,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterData: {fileID: 11400000, guid: 7d85d1ac2db6fa34db376b722c961756, type: 2}
+  currentHP: 0
+  currentRecovery: 0
+  currentMoveSpeed: 0
+  currentMight: 0
+  currentProjectileSpeed: 0
+  currentMagnet: 0
   experience: 0
   level: 1
   experienceCap: 0
@@ -226,6 +219,86 @@ MonoBehaviour:
   - startLevel: 4
     endLevel: 7
     experienceCapIncrease: 300
+--- !u!1 &4732439560814351957
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4033279881491985300}
+  - component: {fileID: 6120277014178077508}
+  - component: {fileID: 3890250683763563189}
+  m_Layer: 0
+  m_Name: Collector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4033279881491985300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4732439560814351957}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.000899156, y: 0.17281088, z: 0}
+  m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4731188869470674725}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6120277014178077508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4732439560814351957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 221d9d81da7533746b6e751b089059e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &3890250683763563189
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4732439560814351957}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &7629275043153713015
 GameObject:
   m_ObjectHideFlags: 0

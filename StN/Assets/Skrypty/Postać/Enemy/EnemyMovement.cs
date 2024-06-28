@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public EnemyScriptableObject enemyData;
+    EnemyStats enemy;
     public GameObject Skeleton;
     private SpriteRenderer spriteRenderer;
     private Vector3 initialPosition;
@@ -14,6 +14,7 @@ public class EnemyMovement : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         initialPosition = transform.position;
+        enemy = GetComponent<EnemyStats>();
         Skeleton = FindObjectOfType<SkeletonMovement>().gameObject;  //Proces szkieleta/zamieniæ na wszystkich graczy
     }
 
@@ -21,7 +22,7 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         Vector3 playerPosition = FindObjectOfType<SkeletonMovement>().transform.position;
-        transform.position = Vector2.MoveTowards(transform.position, playerPosition, enemyData.MoveSpeed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, playerPosition, enemy.currentMoveSpeed * Time.deltaTime);
 
         if(Skeleton.transform.position.x < gameObject.transform.position.x && facingRight)
         {

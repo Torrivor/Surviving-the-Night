@@ -8,6 +8,7 @@ public class SkeletonMovement : MonoBehaviour
     //Ruch naszej postaci
     [HideInInspector]
     public float OstatniaPozycjaHoryzontalna;
+    [HideInInspector]
     public float OstatniaPozycjaVertykalna;
     [HideInInspector]
     public Vector2 wstrone;
@@ -16,12 +17,13 @@ public class SkeletonMovement : MonoBehaviour
 
 
     Rigidbody2D rb;
-    public CharacterScriptableObject characterData;
+    PlayerStats player;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        player = GetComponent<PlayerStats>();
         rb = GetComponent<Rigidbody2D>();
         lastVector = new Vector2(1, 0f); //Utworzenie momentum broni przy starcie gry
 
@@ -67,7 +69,7 @@ public class SkeletonMovement : MonoBehaviour
     void Ruch()
     {
         //prêdkoœæ poruszania
-        rb.velocity = new Vector2 (wstrone.x * characterData.MoveSpeed, wstrone.y * characterData.MoveSpeed);
+        rb.velocity = new Vector2 (wstrone.x * player.currentMoveSpeed, wstrone.y * player.currentMoveSpeed);
 
     }
 

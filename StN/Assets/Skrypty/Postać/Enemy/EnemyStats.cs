@@ -8,11 +8,11 @@ public class EnemyStats : MonoBehaviour
 
     //Obecne staty
     [HideInInspector]
-    float currentMoveSpeed;
+    public float currentMoveSpeed;
     [HideInInspector]
-    float currentHP;
+    public float currentHP;
     [HideInInspector]
-    float currentDamage;
+    public float currentDamage;
 
     public float despawnDistance = 20f;
     Transform Skeleton;
