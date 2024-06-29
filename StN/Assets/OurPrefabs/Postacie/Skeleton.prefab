@@ -37,7 +37,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7130728103619900920}
-  - {fileID: 2192462516846237872}
   - {fileID: 5489717108813643418}
   - {fileID: 4033279881491985300}
   m_Father: {fileID: 0}
@@ -208,6 +207,7 @@ MonoBehaviour:
   currentMight: 0
   currentProjectileSpeed: 0
   currentMagnet: 0
+  spawnedWeapons: []
   experience: 0
   level: 1
   experienceCap: 0
@@ -264,6 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 221d9d81da7533746b6e751b089059e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pullSpeed: 0
 --- !u!58 &3890250683763563189
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -420,51 +421,6 @@ CircleCollider2D:
   m_Offset: {x: -0.07006284, y: 0.019052189}
   serializedVersion: 2
   m_Radius: 0.09955295
---- !u!1 &7761644823473638999
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2192462516846237872}
-  - component: {fileID: 2820978713122067572}
-  m_Layer: 21
-  m_Name: KnifeControl
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2192462516846237872
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7761644823473638999}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 4731188869470674725}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2820978713122067572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7761644823473638999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5779550c3fb76fd4fb602820decd0d55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponData: {fileID: 0}
 --- !u!1 &8468667587781650773
 GameObject:
   m_ObjectHideFlags: 0

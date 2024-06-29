@@ -20,6 +20,8 @@ public class PlayerStats : MonoBehaviour
     [HideInInspector]
     public float currentMagnet;
 
+    public List<GameObject> spawnedWeapons;
+
     //exp i lvl gracza
     [Header("Experience/Level")]
     public int experience = 0;  //exp ktore masz
@@ -43,8 +45,15 @@ public class PlayerStats : MonoBehaviour
 
     public List<LevelRange> levelRanges;
 
+    SkeletonAnimator playerAnimator;
+
     void Awake()
     {
+        characterData = CharacterSelector.getData();
+        /*if(CharacterSelector.instance)
+        {
+            CharacterSelector.instance.destroySingleton();
+        }*/
         //przypisane wartosci
         currentHP = characterData.MaxHP;
         currentRecovery = characterData.Recovery;
@@ -52,6 +61,17 @@ public class PlayerStats : MonoBehaviour
         currentMight = characterData.Might;
         currentProjectileSpeed = characterData.ProjectileSpeed;
         currentMagnet = characterData.Magnet;
+
+        //Spawn broni
+        SpawnWeapon(characterData.StartingWeapon);
+
+        playerAnimator = GetComponent<SkeletonAnimator>();
+        if (characterData.controller)
+        {
+            
+            playerAnimator.SetAnimatorController(characterData.controller);
+        }
+        
     }
 
     void Start()
@@ -150,5 +170,12 @@ public class PlayerStats : MonoBehaviour
                 currentHP = characterData.MaxHP;
             }
         }
+    }
+
+    public void SpawnWeapon(GameObject weapon)
+    {
+        GameObject spawnedWeapon = Instantiate(weapon, transform.position, Quaternion.identity);
+        spawnedWeapon.transform.SetParent(transform);
+        spawnedWeapons.Add(spawnedWeapon);
     }
 }

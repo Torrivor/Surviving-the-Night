@@ -55,4 +55,9 @@ public class SkeletonAnimator : MonoBehaviour
         }
 
     }
+    public void SetAnimatorController(RuntimeAnimatorController c)
+    {
+        if (!A) A = GetComponent<Animator>();
+        A.runtimeAnimatorController = c;
+    }
 }

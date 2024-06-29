@@ -326,7 +326,7 @@ Animator:
   m_GameObject: {fileID: 7585751538753465345}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 07a565deaf923d14c8cca6f57793489a, type: 2}
+  m_Controller: {fileID: 22100000, guid: ddeab7a291729964c865ecdc93e0c665, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -448,13 +448,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae2f6ea60ac132f48a601ffb627bfa6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterData: {fileID: 11400000, guid: 7d85d1ac2db6fa34db376b722c961756, type: 2}
+  characterData: {fileID: 11400000, guid: 4914f3a9187c74149899966bb0ae2aab, type: 2}
   currentHP: 0
   currentRecovery: 0
   currentMoveSpeed: 0
   currentMight: 0
   currentProjectileSpeed: 0
   currentMagnet: 0
+  spawnedWeapons: []
   experience: 0
   level: 1
   experienceCap: 0

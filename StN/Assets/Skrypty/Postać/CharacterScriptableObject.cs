@@ -11,6 +11,9 @@ public class CharacterScriptableObject : ScriptableObject
     public GameObject StartingWeapon { get => startingWeapon; private set => startingWeapon = value; }
 
     [SerializeField]
+    public RuntimeAnimatorController controller;
+
+    [SerializeField]
     float maxHP;
     public float MaxHP { get => maxHP; private set => maxHP = value; }
 
