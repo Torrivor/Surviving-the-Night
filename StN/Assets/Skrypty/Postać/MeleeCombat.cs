@@ -35,6 +35,7 @@ public class MeleeCombat : MonoBehaviour
         if (animator != null)
         {
             animator.SetTrigger("Attack");
+            
         }
         else
         {

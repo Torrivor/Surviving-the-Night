@@ -35,7 +35,7 @@ public class EnemyStats : MonoBehaviour
         currentHP = enemyData.MaxHP;
         currentDamage = enemyData.Damage;
     }
-
+   
     public void TakeDamage(float dmg)
     {
         currentHP -= dmg;
@@ -58,7 +58,7 @@ public class EnemyStats : MonoBehaviour
         if(col.gameObject.CompareTag("Gracz"))
         {
             PlayerStats player = col.gameObject.GetComponent<PlayerStats>();
-            player.TakeDamage(currentMoveSpeed);
+            player.TakeDamage(currentDamage);
         }
     }
 

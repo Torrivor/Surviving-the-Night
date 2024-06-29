@@ -5,6 +5,7 @@ public class PlayerCollector : MonoBehaviour
     PlayerStats player;
     CircleCollider2D playerCollector;
     public float pullSpeed;
+    private Transform collectibleTransform; // Referencja do przyci¹ganego przedmiotu
 
     void Start()
     {
@@ -15,20 +16,21 @@ public class PlayerCollector : MonoBehaviour
     void Update()
     {
         playerCollector.radius = player.currentMagnet;
+
+        if (collectibleTransform != null)
+        {
+            // Przemieszczanie przedmiotu w kierunku gracza
+            collectibleTransform.position = Vector2.MoveTowards(collectibleTransform.position,transform.position,pullSpeed * Time.deltaTime);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        //sprawdza czy inny obiekt ma interface ICollect
+        // Sprawdza czy inny obiekt ma interfejs ICollectible
         if (col.gameObject.TryGetComponent(out ICollectible collectible))
         {
-            //anim przyciagania przedmiotu
-            Rigidbody2D rb = col.gameObject.GetComponent<Rigidbody2D>();
-            Vector2 forceDirection = (transform.position - col.transform.position).normalized;
-            rb.AddForce(forceDirection * pullSpeed);
-
-            //jesli ma to zbiera
-            collectible.Collect();
+            // Ustawia referencjê do przyci¹ganego przedmiotu
+            collectibleTransform = col.transform;
         }
     }
 }

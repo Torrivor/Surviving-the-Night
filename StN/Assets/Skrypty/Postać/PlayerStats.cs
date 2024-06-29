@@ -7,7 +7,7 @@ public class PlayerStats : MonoBehaviour
     public CharacterScriptableObject characterData;
 
     //obecne staty
-    [HideInInspector]
+    //[HideInInspector]
     public float currentHP;
     [HideInInspector]
     public float currentRecovery;

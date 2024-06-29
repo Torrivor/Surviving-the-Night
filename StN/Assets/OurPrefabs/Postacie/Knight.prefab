@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5934223693158992498}
   - component: {fileID: 4334303375786584797}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Front leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 820905908504250558}
   - component: {fileID: 6671388370935790335}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7466329222847155885}
   - component: {fileID: 2064137485645579483}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5519602807149071898}
   - component: {fileID: 3809485414242299000}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: 11499376841304104}
   - component: {fileID: 8406748795946039892}
   - component: {fileID: 3582578694840338327}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Knight
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -448,7 +448,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6e21ab78be17d46944b1e126bc829a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: 424929678acca7049ad33beed4f6e096, type: 2}
   Skeleton: {fileID: 0}
   facingRight: 0
 --- !u!114 &5005571080289775236
@@ -464,6 +463,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 424929678acca7049ad33beed4f6e096, type: 2}
+  currentMoveSpeed: 0
+  currentHP: 0
+  currentDamage: 0
+  despawnDistance: 20
 --- !u!58 &11499376841304104
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -571,7 +574,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8960323691256717530}
   - component: {fileID: 6107532802876774475}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Back arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -656,7 +659,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3328106286035716554}
   - component: {fileID: 3188440066006610696}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Back leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -740,7 +743,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3415346656280991648}
   - component: {fileID: 3755147319869219698}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -829,7 +832,7 @@ GameObject:
   m_Component:
   - component: {fileID: 144091262693938198}
   - component: {fileID: 3250137677642025409}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Front arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}

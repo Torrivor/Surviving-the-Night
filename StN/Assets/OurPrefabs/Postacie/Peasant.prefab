@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6155312228594543727}
   - component: {fileID: 7902149704828895449}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2188309527482236529}
   - component: {fileID: 4986613369849490848}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Front arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7717581511046987980}
   - component: {fileID: 7050445314225189436}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Back arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,7 +264,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2060855524506653907}
   - component: {fileID: 7368986504836004065}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -348,7 +348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5385986932638114223}
   - component: {fileID: 4618630618998555089}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Front leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +432,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8963948922594647895}
   - component: {fileID: 1115343598609523784}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Back leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -521,7 +521,7 @@ GameObject:
   - component: {fileID: 7608668489747171673}
   - component: {fileID: -8062772784519082832}
   - component: {fileID: 7721297526728201081}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Peasant
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -616,7 +616,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6e21ab78be17d46944b1e126bc829a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: 538955a1b2d5d244fbac2b0819e3c241, type: 2}
   Skeleton: {fileID: 0}
   facingRight: 0
 --- !u!61 &-8062772784519082832
@@ -677,6 +676,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 538955a1b2d5d244fbac2b0819e3c241, type: 2}
+  currentMoveSpeed: 0
+  currentHP: 0
+  currentDamage: 0
+  despawnDistance: 20
 --- !u!1 &7195532566378155330
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,7 +690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4177989324239991573}
   - component: {fileID: 3783646728440348392}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -771,7 +774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6685172020482706413}
   - component: {fileID: 7555925039194848434}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
