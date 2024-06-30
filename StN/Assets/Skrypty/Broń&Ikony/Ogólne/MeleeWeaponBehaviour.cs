@@ -21,6 +21,11 @@ public class MeleeWeaponBehaviour : MonoBehaviour
         currentWytrzymalocs = weaponData.Wytrzymalosc;
     }
 
+    public float GetCurrentDamage()
+    {
+        return currentDamage *= FindObjectOfType<PlayerStats>().currentMight;
+    }
+
 
     protected virtual void Start()
     {
@@ -35,19 +40,13 @@ public class MeleeWeaponBehaviour : MonoBehaviour
         {
             // Pobierz komponent EnemyStats z obiektu wroga
             EnemyStats enemy = col.GetComponent<EnemyStats>();
-
-            // SprawdŸ, czy uda³o siê pobraæ komponent EnemyStats
-            if (enemy != null)
+            enemy.TakeDamage(GetCurrentDamage());
+        }
+        else if (col.CompareTag("Prop"))
+        {
+            if(col.gameObject.TryGetComponent(out BreakableProps breakable))
             {
-                // Zadaj obra¿enia wrogowi
-                enemy.TakeDamage(currentDamage);
-
-                // Debugowanie - sprawdŸ, czy obra¿enia s¹ zadawane
-                Debug.Log("Obra¿enia zadane wrogowi: " + currentDamage);
-            }
-            else
-            {
-                Debug.LogWarning("Obiekt wroga nie posiada komponentu EnemyStats.");
+                breakable.TakeDamage(GetCurrentDamage());
             }
         }
     }

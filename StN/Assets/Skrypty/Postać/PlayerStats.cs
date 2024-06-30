@@ -9,7 +9,7 @@ public class PlayerStats : MonoBehaviour
     //obecne staty
     //[HideInInspector]
     public float currentHP;
-    [HideInInspector]
+    //[HideInInspector]
     public float currentRecovery;
     [HideInInspector]
     public float currentMoveSpeed;
@@ -17,10 +17,10 @@ public class PlayerStats : MonoBehaviour
     public float currentMight;
     [HideInInspector]
     public float currentProjectileSpeed;
-    [HideInInspector]
+    //[HideInInspector]
     public float currentMagnet;
 
-    public List<GameObject> spawnedWeapons;
+
 
     //exp i lvl gracza
     [Header("Experience/Level")]
@@ -45,6 +45,11 @@ public class PlayerStats : MonoBehaviour
 
     public List<LevelRange> levelRanges;
 
+    InventoryManager inventory;
+    public int weaponIndex;
+    public int passiveItemIndex;
+
+
     SkeletonAnimator playerAnimator;
 
     void Awake()
@@ -54,6 +59,9 @@ public class PlayerStats : MonoBehaviour
         {
             CharacterSelector.instance.destroySingleton();
         }*/
+
+        inventory = GetComponent<InventoryManager>();
+
         //przypisane wartosci
         currentHP = characterData.MaxHP;
         currentRecovery = characterData.Recovery;
@@ -174,8 +182,18 @@ public class PlayerStats : MonoBehaviour
 
     public void SpawnWeapon(GameObject weapon)
     {
+        //sprawdza czy eq iest pelne
+        if(weaponIndex >= inventory.weaponSlots.Count - 1)
+        {
+            Debug.LogError("Inventory zape³nione");
+            return;
+        }
+
+
         GameObject spawnedWeapon = Instantiate(weapon, transform.position, Quaternion.identity);
         spawnedWeapon.transform.SetParent(transform);
-        spawnedWeapons.Add(spawnedWeapon);
+        inventory.AddWeapon(weaponIndex, spawnedWeapon.GetComponent<Weapons>());  //dodaje bron do iventory slota
+
+        weaponIndex++;
     }
 }

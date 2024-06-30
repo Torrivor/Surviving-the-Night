@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7207829583697557076}
   - component: {fileID: -3126348851772146498}
   - component: {fileID: 8706592001425200711}
+  - component: {fileID: 5219906312723405414}
   m_Layer: 0
   m_Name: Shield 1
   m_TagString: Untagged
@@ -93,7 +94,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4801957982050906767}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 02cdee3a956a850478fd1f9bdd826ff5, type: 3}
   m_Name: 
@@ -135,3 +136,17 @@ CircleCollider2D:
   m_Offset: {x: -0.0041686622, y: -0.06266622}
   serializedVersion: 2
   m_Radius: 0.43869606
+--- !u!114 &5219906312723405414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4801957982050906767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ca847f8769f52e4c89a30dc10e79313, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponData: {fileID: 11400000, guid: 4d99289b09ec06540b7e4b019ff59906, type: 2}
+  destroyAfterSeconds: 2

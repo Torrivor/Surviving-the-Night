@@ -9,11 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd7b6af6aac76af40a6b0b2e90c5284c, type: 3}
-  m_Name: Garlic Weapon
+  m_Script: {fileID: 11500000, guid: 8dfacd51645bdbf4898709895d4d3d16, type: 3}
+  m_Name: HealthScroll
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4801957982050906767, guid: 363daf32d4595e344a70b769aaf449af, type: 3}
-  damage: 10
-  speed: 0
-  cooldownofweapon: 3
-  wytrzymalosc: 0
+  multipler: 50

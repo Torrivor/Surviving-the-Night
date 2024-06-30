@@ -9,11 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd7b6af6aac76af40a6b0b2e90c5284c, type: 3}
-  m_Name: Book
+  m_Script: {fileID: 11500000, guid: 8dfacd51645bdbf4898709895d4d3d16, type: 3}
+  m_Name: MightRing
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8977204598462052783, guid: d98e450ca3d96c9449ed6512b1e9778b, type: 3}
-  damage: 100
-  speed: 10
-  cooldownofweapon: 0
-  wytrzymalosc: 0
+  multipler: 100
