@@ -24,6 +24,10 @@ public class ZachowaniePociskow : MonoBehaviour
         currentWytrzymalocs = weaponData.Wytrzymalosc;
     }
 
+    public float GetCurrentDamage()
+    {
+        return currentDamage *= FindObjectOfType<PlayerStats>().currentMight;
+    }
 
     protected virtual void Start()
     {
@@ -82,14 +86,14 @@ public class ZachowaniePociskow : MonoBehaviour
         //gdy kolizja zadaj obrazenia
         if(col.CompareTag("Enemy"))
         { EnemyStats enemy = col.GetComponent<EnemyStats>();
-            enemy.TakeDamage(currentDamage);
+            enemy.TakeDamage(GetCurrentDamage());
             ZmniejszWytrzymalosc();
         }
         else if (col.CompareTag("Prop"))
         {
             if(col.gameObject.TryGetComponent(out BreakableProps breakable))
             {
-                breakable.TakeDamage(currentDamage);
+                breakable.TakeDamage(GetCurrentDamage());
                 ZmniejszWytrzymalosc();
             }
         }
