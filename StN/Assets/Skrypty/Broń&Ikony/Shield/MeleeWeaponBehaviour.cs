@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BookControl : MonoBehaviour
+public class MeleeWeaponBehaviour : MonoBehaviour
 {
     public WeaponsScriptableObject weaponData;
 
@@ -30,12 +30,25 @@ public class BookControl : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D col)
     {
-        //gdy kolizja zadaj obrazenia
+        // Sprawdü, czy kolizja jest z wrogiem
         if (col.CompareTag("Enemy"))
         {
+            // Pobierz komponent EnemyStats z obiektu wroga
             EnemyStats enemy = col.GetComponent<EnemyStats>();
-            enemy.TakeDamage(currentDamage);
 
+            // Sprawdü, czy uda≥o siÍ pobraÊ komponent EnemyStats
+            if (enemy != null)
+            {
+                // Zadaj obraøenia wrogowi
+                enemy.TakeDamage(currentDamage);
+
+                // Debugowanie - sprawdü, czy obraøenia sπ zadawane
+                Debug.Log("Obraøenia zadane wrogowi: " + currentDamage);
+            }
+            else
+            {
+                Debug.LogWarning("Obiekt wroga nie posiada komponentu EnemyStats.");
+            }
         }
     }
 }
