@@ -48,7 +48,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateSpeed: 1
   weaponData: {fileID: 11400000, guid: 23f94724504272a4784eec8afff3fba7, type: 2}
-  ZniszczPoSekundzie: 600
   Skeleton: {fileID: 6524381411353230227}
 --- !u!114 &-8425992015592201033
 MonoBehaviour:
@@ -63,6 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponData: {fileID: 11400000, guid: 23f94724504272a4784eec8afff3fba7, type: 2}
+  destroyAfterSeconds: 6000
 --- !u!1 &6013592174335231960
 GameObject:
   m_ObjectHideFlags: 0
