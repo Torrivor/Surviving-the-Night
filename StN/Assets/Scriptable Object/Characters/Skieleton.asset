@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d6dc2a58d02de4c809741c40452199, type: 3}
   m_Name: Skieleton
   m_EditorClassIdentifier: 
-  startingWeapon: {fileID: 6562127436923587339, guid: 7173ae27d4955284697b0901a8cf5091,
+  startingWeapon: {fileID: 4046195172518820960, guid: a6edcf821313cbe46b9a88a8d684c9e1,
     type: 3}
   controller: {fileID: 9100000, guid: 29072297dc4a3194882d3ee4bbdcab67, type: 2}
   maxHP: 100

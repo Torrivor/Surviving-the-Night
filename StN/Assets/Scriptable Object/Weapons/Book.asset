@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Book
   m_EditorClassIdentifier: 
   prefab: {fileID: 8977204598462052783, guid: d98e450ca3d96c9449ed6512b1e9778b, type: 3}
-  damage: 5
-  speed: 2
+  damage: 100
+  speed: 10
   cooldownofweapon: 0
   wytrzymalosc: 0
