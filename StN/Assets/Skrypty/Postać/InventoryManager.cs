@@ -12,20 +12,48 @@ public class InventoryManager : MonoBehaviour
     public void AddWeapon(int slotIndex, Weapons weapon)
     {
         weaponSlots[slotIndex] = weapon;
+        weaponLevels[slotIndex] = weapon.weaponData.Level;
     }
 
     public void AddPassiveItem(int slotIndex, PassiveItem passiveItem)
     {
         passiveItemsSlots[slotIndex] = passiveItem;
+        passiveItemLevels[slotIndex] = passiveItem.passiveItemData.Level;
     }
 
     public void LevelUpWeapon(int slotIndex)
     {
-
+        if(weaponSlots.Count > slotIndex)
+        {
+            Weapons weapon = weaponSlots[slotIndex];
+            if(!weapon.weaponData.NextLevelPrefab) //sprawdza czy jest nastepny lvl dla broni
+            {
+                Debug.LogError("brak nastepnego lvl dla" + weapon.name);
+                return;
+            }
+            GameObject upgradedWeapon = Instantiate(weapon.weaponData.NextLevelPrefab, transform.position, Quaternion.identity);
+            upgradedWeapon.transform.SetParent(transform); //ustawia bron jako dziecko dla player
+            AddWeapon(slotIndex, upgradedWeapon.GetComponent<Weapons>());
+            Destroy(weapon.gameObject);
+            weaponLevels[slotIndex] = upgradedWeapon.GetComponent<Weapons>().weaponData.Level;  //zeby upewnic sie ze mamy wlasciwy lvl
+        }
     }
 
     public void LevelUpPassiveItem(int slotIndex)
     {
-
+        if (passiveItemsSlots.Count > slotIndex)
+        {
+            PassiveItem passiveItem = passiveItemsSlots[slotIndex];
+            if (!passiveItem.passiveItemData.NextLevelPrefab) //sprawdza czy jest nastepny lvl dla pass
+            {
+                Debug.LogError("brak nastepnego lvl dla" + passiveItem.name);
+                return;
+            }
+            GameObject upgradedPassiveItem = Instantiate(passiveItem.passiveItemData.NextLevelPrefab, transform.position, Quaternion.identity);
+            upgradedPassiveItem.transform.SetParent(transform); //ustawia bron jako dziecko dla player
+            AddPassiveItem(slotIndex, upgradedPassiveItem.GetComponent<PassiveItem>());
+            Destroy(passiveItem.gameObject);
+            passiveItemLevels[slotIndex] = upgradedPassiveItem.GetComponent<PassiveItem>().passiveItemData.Level;  //zeby upewnic sie ze mamy wlasciwy lvl pasywki
+        }
     }
 }

@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd7b6af6aac76af40a6b0b2e90c5284c, type: 3}
-  m_Name: Knife Weapon
+  m_Script: {fileID: 11500000, guid: 8dfacd51645bdbf4898709895d4d3d16, type: 3}
+  m_Name: SpeedBoots
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8495924603873770568, guid: 0e7db6c5492aba341993fee2f2da7cc7, type: 3}
-  damage: 5
-  speed: 10
-  cooldownofweapon: 2
-  wytrzymalosc: 1
+  multipler: 50
+  level: 1
+  nextLevelPrefab: {fileID: 5401294330412881753, guid: 84ef3a9083394134697e63929746a7d3,
+    type: 3}

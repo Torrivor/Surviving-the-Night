@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dfacd51645bdbf4898709895d4d3d16, type: 3}
+  m_Name: HealthScroll lvl2
+  m_EditorClassIdentifier: 
+  multipler: 75
+  level: 2
+  nextLevelPrefab: {fileID: 4993691970328534864, guid: 5033132839ef72a4f9f76429eb411bf5,
+    type: 3}

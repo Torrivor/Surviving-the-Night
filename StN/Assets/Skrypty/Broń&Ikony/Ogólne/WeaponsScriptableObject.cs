@@ -26,4 +26,11 @@ public class WeaponsScriptableObject : ScriptableObject
     int wytrzymalosc;
     public int Wytrzymalosc { get => wytrzymalosc; private set => wytrzymalosc = value; }
 
+    [SerializeField]
+    int level;  //nie powinno byc zmieniane w grze (tylok w edytorze)
+    public int Level { get => level; private set => level = value; }
+
+    [SerializeField]
+    GameObject nextLevelPrefab;  //prefab nastepnego poziomu- czym sie obiekt staje po lvlupie          nie mylic z prefabem do spawnowania w kolejnym lvl
+    public GameObject NextLevelPrefab { get => nextLevelPrefab; private set => nextLevelPrefab = value; }
 }

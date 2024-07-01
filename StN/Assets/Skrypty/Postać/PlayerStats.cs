@@ -50,6 +50,9 @@ public class PlayerStats : MonoBehaviour
     public int passiveItemIndex;
 
 
+    public GameObject secondWeaponTest;
+    public GameObject firstPassiveItemTest, secondPassiveItemTest;
+
     SkeletonAnimator playerAnimator;
 
     void Awake()
@@ -72,6 +75,9 @@ public class PlayerStats : MonoBehaviour
 
         //Spawn broni
         SpawnWeapon(characterData.StartingWeapon);
+        SpawnWeapon(secondWeaponTest);
+        SpawnPassiveItem(firstPassiveItemTest);
+        SpawnPassiveItem(secondPassiveItemTest);
 
         playerAnimator = GetComponent<SkeletonAnimator>();
         if (characterData.controller)
@@ -189,11 +195,28 @@ public class PlayerStats : MonoBehaviour
             return;
         }
 
-
+        //respi poczatkowa bron
         GameObject spawnedWeapon = Instantiate(weapon, transform.position, Quaternion.identity);
         spawnedWeapon.transform.SetParent(transform);
         inventory.AddWeapon(weaponIndex, spawnedWeapon.GetComponent<Weapons>());  //dodaje bron do iventory slota
 
         weaponIndex++;
+    }
+
+    public void SpawnPassiveItem(GameObject passiveItem)
+    {
+        //sprawdza czy eq iest pelne
+        if (passiveItemIndex >= inventory.passiveItemsSlots.Count - 1)
+        {
+            Debug.LogError("Inventory zape³nione");
+            return;
+        }
+
+
+        GameObject spawnedPassiveItem = Instantiate(passiveItem, transform.position, Quaternion.identity);
+        spawnedPassiveItem.transform.SetParent(transform);
+        inventory.AddPassiveItem(passiveItemIndex, spawnedPassiveItem.GetComponent<PassiveItem>());  //dodaje passive do iventory slota
+
+        passiveItemIndex++;
     }
 }

@@ -10,6 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8dfacd51645bdbf4898709895d4d3d16, type: 3}
-  m_Name: SpeedBoots
+  m_Name: RecoveryRing
   m_EditorClassIdentifier: 
-  multipler: 50
+  multipler: 100
+  level: 1
+  nextLevelPrefab: {fileID: 6060062125766075308, guid: ed19ce918c96ac740ad29d20d51644b7,
+    type: 3}

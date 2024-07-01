@@ -10,6 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8dfacd51645bdbf4898709895d4d3d16, type: 3}
-  m_Name: HealthScroll
+  m_Name: MagnetStaff lvl2
   m_EditorClassIdentifier: 
   multipler: 50
+  level: 2
+  nextLevelPrefab: {fileID: 8406713371686966153, guid: b5c17ebcbb9791d468e4423d891bfc3d,
+    type: 3}
