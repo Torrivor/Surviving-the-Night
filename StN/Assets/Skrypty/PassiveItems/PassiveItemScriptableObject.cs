@@ -16,4 +16,8 @@ public class PassiveItemScriptableObject : ScriptableObject
     [SerializeField]
     GameObject nextLevelPrefab;  //prefab nastepnego poziomu- czym sie obiekt staje po lvlupie          nie mylic z prefabem do spawnowania w kolejnym lvl
     public GameObject NextLevelPrefab { get => nextLevelPrefab; private set => nextLevelPrefab = value; }
+
+    [SerializeField]
+    Sprite icon;  //nie modyfikowac w grze tylko w editorze
+    public Sprite Icon { get => icon; private set => icon = value; }
 }

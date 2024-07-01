@@ -1,24 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
     public List<Weapons> weaponSlots = new List<Weapons>(6);  //sloty na bron np 6 mozna zmienic
     public int[] weaponLevels = new int[6];
+    public List<Image> weaponUISlots = new List<Image>(6);
     public List<PassiveItem> passiveItemsSlots = new List<PassiveItem>(6);
     public int[] passiveItemLevels = new int[6];
+    public List<Image> passiveItemUISlots = new List<Image>(6);
+
 
     public void AddWeapon(int slotIndex, Weapons weapon)
     {
         weaponSlots[slotIndex] = weapon;
         weaponLevels[slotIndex] = weapon.weaponData.Level;
+        weaponUISlots[slotIndex].enabled = true;    //wlancza obrazek gdy jest w uzyciu slot
+        weaponUISlots[slotIndex].sprite = weapon.weaponData.Icon;
     }
 
     public void AddPassiveItem(int slotIndex, PassiveItem passiveItem)
     {
         passiveItemsSlots[slotIndex] = passiveItem;
         passiveItemLevels[slotIndex] = passiveItem.passiveItemData.Level;
+        passiveItemUISlots[slotIndex].enabled = true;    //wlancza obrazek gdy jest w uzyciu slot
+        passiveItemUISlots[slotIndex].sprite = passiveItem.passiveItemData.Icon;
     }
 
     public void LevelUpWeapon(int slotIndex)

@@ -19,3 +19,4 @@ MonoBehaviour:
   wytrzymalosc: 1
   level: 2
   nextLevelPrefab: {fileID: 0}
+  icon: {fileID: -1904671848, guid: 83bf93558b0ec514a95bd6edcd67f7ac, type: 3}
