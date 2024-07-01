@@ -1035,9 +1035,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3323312983672540987}
+      - m_Target: {fileID: 2556789336606631289}
         m_TargetAssemblyTypeName: InventoryManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: LevelUpWeapon
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1774,6 +1774,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1867394641}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1269124623
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1269124626}
+  - component: {fileID: 1269124625}
+  - component: {fileID: 1269124624}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1269124624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269124623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1269124625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269124623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1269124626
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269124623}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1495162661
 GameObject:
   m_ObjectHideFlags: 0
@@ -2315,7 +2383,7 @@ MonoBehaviour:
   - NazwaFali: Fala 1
     enemyGroups:
     - EnemyName: Knight
-      EnemyCount: 1
+      EnemyCount: 5
       SpawnCount: 0
       enemyPrefabs: {fileID: 2725158672590557474, guid: 3d2ee59e39b2b7249b5b40441a4de469,
         type: 3}
@@ -2675,7 +2743,7 @@ PrefabInstance:
         type: 3}
       propertyPath: secondPassiveItemTest
       value: 
-      objectReference: {fileID: 8406713371686966153, guid: 12712f20b852ac14dbdb0ea1438d36f5,
+      objectReference: {fileID: 5401294330412881753, guid: 997a0689f8706b741b6e070f103d31d2,
         type: 3}
     - target: {fileID: 2820978713122067572, guid: 8090bae9724c2374eadcc815885ab3fc,
         type: 3}
@@ -2788,12 +2856,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2556789336606631289}
   m_SourcePrefab: {fileID: 100100000, guid: 8090bae9724c2374eadcc815885ab3fc, type: 3}
---- !u!1 &3323312983672540987 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7629275043153713015, guid: 8090bae9724c2374eadcc815885ab3fc,
-    type: 3}
-  m_PrefabInstance: {fileID: 3323312983672540986}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2807,3 +2869,4 @@ SceneRoots:
   - {fileID: 403768137}
   - {fileID: 1495162663}
   - {fileID: 1608403714}
+  - {fileID: 1269124626}

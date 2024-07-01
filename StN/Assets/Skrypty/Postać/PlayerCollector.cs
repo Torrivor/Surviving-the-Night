@@ -31,6 +31,7 @@ public class PlayerCollector : MonoBehaviour
         {
             // Ustawia referencjê do przyci¹ganego przedmiotu
             collectibleTransform = col.transform;
+            collectible.Collect();
         }
     }
 }

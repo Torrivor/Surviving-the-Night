@@ -18,5 +18,4 @@ MonoBehaviour:
   cooldownofweapon: 2
   wytrzymalosc: 1
   level: 2
-  nextLevelPrefab: {fileID: 6562127436923587339, guid: 356321de000f8554e9647c5e630d01e6,
-    type: 3}
+  nextLevelPrefab: {fileID: 0}
