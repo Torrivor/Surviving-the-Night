@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
+
    public enum GameState
     {
     Gameplay,
@@ -17,10 +20,32 @@ public class GameManager : MonoBehaviour
 
     [Header("UI")]
     public GameObject pauseScreen;
+    public GameObject resultsScreen;
 
+    //wyœwietlacz aktualnych stat
+    public Text currentHPDisplay;
+    public Text currentRecoveryDisplay;
+    public Text currentMoveSpeedDisplay;
+    public Text currentMightDisplay;
+    public Text currentProjectileSpeedDisplay;
+    public Text currentMagnetDisplay;
+
+    //oznacza czy gra jest zakonczona
+    public bool isKoniec_Gry = false;
 
     public void Awake()
     {
+        //ostrzerzenie jesli jest jeszczejeden singleton tego typu w grze
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Debug.LogWarning("EXTRA " + this + " DELETED");
+            Destroy(gameObject);
+        }
+
         DisableScreen();
     }
     void Update()
@@ -38,6 +63,13 @@ public class GameManager : MonoBehaviour
                 break;
 
             case GameState.Koniec_Gry:
+                if (!isKoniec_Gry)
+                {
+                    isKoniec_Gry = true;
+                    Time.timeScale = 0f; //calkowicie zatrzymuje gre
+                    Debug.Log("Koniec Gry");
+                    DisplayResults();
+                }
                 break;
             default:
                 Debug.LogWarning("STATE DOES NOT EXIST");
@@ -62,7 +94,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("Gra jest wstrzymana");
         }
     }
-    void ResumeGame()
+    public void ResumeGame()
     {
         if (currentState == GameState.Wstrzymano)
         {
@@ -91,7 +123,16 @@ public class GameManager : MonoBehaviour
     void DisableScreen()
     {
         pauseScreen.SetActive(false);
+        resultsScreen.SetActive(false);
+    }
+
+    public void Koniec_Gry()
+    {
+        ChangeState(GameState.Koniec_Gry);
+    }
+
+    void DisplayResults()
+    {
+        resultsScreen.SetActive(true);
     }
 }
-
-

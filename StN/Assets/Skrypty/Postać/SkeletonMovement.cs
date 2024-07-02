@@ -42,6 +42,11 @@ public class SkeletonMovement : MonoBehaviour
 
     void InputManagement()
     {
+        if (GameManager.instance.isKoniec_Gry)
+        {
+            return;
+        }
+
         //Poruszanie w boki i góra/do³
         float ruchX = Input.GetAxisRaw("Horizontal");
         float ruchY = Input.GetAxisRaw("Vertical");
@@ -68,8 +73,12 @@ public class SkeletonMovement : MonoBehaviour
     
     void Ruch()
     {
+        if (GameManager.instance.isKoniec_Gry)
+        {
+            return;
+        }
         //prêdkoœæ poruszania
-        rb.velocity = new Vector2 (wstrone.x * player.currentMoveSpeed, wstrone.y * player.currentMoveSpeed);
+        rb.velocity = new Vector2 (wstrone.x * player.CurrentMoveSpeed, wstrone.y * player.CurrentMoveSpeed);
 
     }
 

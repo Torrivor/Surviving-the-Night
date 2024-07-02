@@ -6,6 +6,6 @@ public class RecoveryPasiveItem : PassiveItem
 {
     protected override void ApplyModifier()
     {
-        player.currentRecovery *= 1 + passiveItemData.Multipler / 100f;
+        player.CurrentRecovery *= 1 + passiveItemData.Multipler / 100f;
     }
 }
