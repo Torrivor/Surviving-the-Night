@@ -18,5 +18,8 @@ MonoBehaviour:
   cooldownofweapon: 2.5
   wytrzymalosc: 0
   level: 2
-  nextLevelPrefab: {fileID: 0}
+  nextLevelPrefab: {fileID: 4046195172518820960, guid: 9dfaeba1c1c1cc449b7fda9d78683f8c,
+    type: 3}
+  name: Shield
+  description: Damage Enemis around player
   icon: {fileID: 2130171591, guid: ba00d2cc9cfe3aa4dbabe584112b29a8, type: 3}

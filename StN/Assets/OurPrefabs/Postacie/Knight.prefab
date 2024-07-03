@@ -466,6 +466,7 @@ MonoBehaviour:
   currentMoveSpeed: 0
   currentHP: 0
   currentDamage: 0
+  invincibilityDuration: 0.5
   despawnDistance: 20
 --- !u!58 &11499376841304104
 CircleCollider2D:

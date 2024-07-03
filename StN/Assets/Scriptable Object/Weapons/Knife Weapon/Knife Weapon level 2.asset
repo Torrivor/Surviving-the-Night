@@ -12,11 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd7b6af6aac76af40a6b0b2e90c5284c, type: 3}
   m_Name: Knife Weapon level 2
   m_EditorClassIdentifier: 
-  prefab: {fileID: 8495924603873770568, guid: 0e7db6c5492aba341993fee2f2da7cc7, type: 3}
-  damage: 5
+  prefab: {fileID: 8495924603873770568, guid: df24685526d496f4ba53747ca200a050, type: 3}
+  damage: 7.5
   speed: 15
   cooldownofweapon: 2
   wytrzymalosc: 1
   level: 2
-  nextLevelPrefab: {fileID: 0}
+  nextLevelPrefab: {fileID: 6562127436923587339, guid: e4953e97c37d07a40937c4f3bc0f8f3d,
+    type: 3}
+  name: Knife
+  description: Faster and Stronger Trowable Weapon
   icon: {fileID: -1904671848, guid: 83bf93558b0ec514a95bd6edcd67f7ac, type: 3}

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a712b4cda3e5d544eb00fbfdee3424f9, type: 3}
   m_Name: Priest - enemy
   m_EditorClassIdentifier: 
-  moveSpeed: 2
-  maxHP: 15
-  damage: 0
+  moveSpeed: 5
+  maxHP: 50
+  damage: 220

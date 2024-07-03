@@ -17,9 +17,9 @@ MonoBehaviour:
   startingWeapon: {fileID: 4046195172518820960, guid: a6edcf821313cbe46b9a88a8d684c9e1,
     type: 3}
   controller: {fileID: 9100000, guid: 29072297dc4a3194882d3ee4bbdcab67, type: 2}
-  maxHP: 1
-  recovery: 0.5
-  moveSpeed: 5
+  maxHP: 500
+  recovery: 0.2
+  moveSpeed: 2.5
   might: 1
   projectileSpeed: 1
   magnet: 1.6

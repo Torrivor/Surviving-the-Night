@@ -14,6 +14,12 @@ public class EnemyStats : MonoBehaviour
     [HideInInspector]
     public float currentDamage;
 
+    //I-Frames
+    [Header("I-Frames")]
+    public float invincibilityDuration;
+    float invincibilityTimer;
+    bool isInvincible;
+
     public float despawnDistance = 20f;
     Transform Skeleton;
 
@@ -28,6 +34,15 @@ public class EnemyStats : MonoBehaviour
         {
             ReturnEnemy();
         }
+
+        if (invincibilityTimer > 0)
+        {
+            invincibilityTimer -= Time.deltaTime;
+        }
+        else if (isInvincible)
+        {
+            isInvincible = false;
+        }
     }
     void Awake()
     {
@@ -38,10 +53,17 @@ public class EnemyStats : MonoBehaviour
    
     public void TakeDamage(float dmg)
     {
-        currentHP -= dmg;
-        if (currentHP <= 0)
+        if (!isInvincible)
         {
-            Kill();
+            currentHP -= dmg;
+
+            invincibilityTimer = invincibilityDuration;
+            isInvincible = true;
+
+            if (currentHP <= 0)
+            {
+                Kill();
+            }
         }
     }
 

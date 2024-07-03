@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dfacd51645bdbf4898709895d4d3d16, type: 3}
   m_Name: HealthScroll lvl2
   m_EditorClassIdentifier: 
-  multipler: 75
+  multipler: 50
   level: 2
-  nextLevelPrefab: {fileID: 0}
+  nextLevelPrefab: {fileID: 4993691970328534864, guid: b3d5c6b73d1445342af9b7c94caac925,
+    type: 3}
+  name: HealthScroll
+  description: Incrise max Hp by 50%
   icon: {fileID: 1589317374, guid: ba00d2cc9cfe3aa4dbabe584112b29a8, type: 3}

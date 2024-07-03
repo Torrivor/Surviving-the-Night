@@ -386,6 +386,7 @@ MonoBehaviour:
   currentMoveSpeed: 0
   currentHP: 0
   currentDamage: 0
+  invincibilityDuration: 0.5
   despawnDistance: 20
 --- !u!61 &-8959581683849687986
 BoxCollider2D:

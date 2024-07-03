@@ -624,7 +624,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 33b6cd7837c7642958dac012307e9086, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -996,7 +996,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c0cabce778ad54792bba3a0ca6765417, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.516
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1340,7 +1340,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 33b6cd7837c7642958dac012307e9086, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3377,7 +3377,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9b1cde0c2a6be405ba097772a687b5ae, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.336
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5128,7 +5128,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 33b6cd7837c7642958dac012307e9086, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -5282,7 +5282,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 999
+  m_Text: You Won
 --- !u!222 &1315366719
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5787,7 +5787,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 33b6cd7837c7642958dac012307e9086, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6143,6 +6143,7 @@ MonoBehaviour:
   stopwatchDisplay: {fileID: 1169049148}
   isKoniec_Gry: 0
   choosingUpgrade: 0
+  playerObject: {fileID: 0}
 --- !u!4 &1495162663
 Transform:
   m_ObjectHideFlags: 0
@@ -6376,7 +6377,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 33b6cd7837c7642958dac012307e9086, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7625,13 +7626,8 @@ MonoBehaviour:
   waves:
   - NazwaFali: Fala 1
     enemyGroups:
-    - EnemyName: Knight
-      EnemyCount: 10
-      SpawnCount: 0
-      enemyPrefabs: {fileID: 2725158672590557474, guid: 3d2ee59e39b2b7249b5b40441a4de469,
-        type: 3}
     - EnemyName: Peasant
-      EnemyCount: 0
+      EnemyCount: 15
       SpawnCount: 0
       enemyPrefabs: {fileID: 5150781104156124289, guid: c398f531ded992442af0154e7c6b6ac8,
         type: 3}
@@ -7640,23 +7636,258 @@ MonoBehaviour:
     spawnCount: 0
   - NazwaFali: Fala 2
     enemyGroups:
-    - EnemyName: Knight
-      EnemyCount: 10
+    - EnemyName: Peasant
+      EnemyCount: 17
       SpawnCount: 0
-      enemyPrefabs: {fileID: 2725158672590557474, guid: 3d2ee59e39b2b7249b5b40441a4de469,
+      enemyPrefabs: {fileID: 5150781104156124289, guid: c398f531ded992442af0154e7c6b6ac8,
         type: 3}
     - EnemyName: Peasant
-      EnemyCount: 0
+      EnemyCount: 13
       SpawnCount: 0
       enemyPrefabs: {fileID: 5150781104156124289, guid: c398f531ded992442af0154e7c6b6ac8,
         type: 3}
     FalaQuota: 0
-    spawnIntereval: 3
+    spawnIntereval: 1
+    spawnCount: 0
+  - NazwaFali: Fala 3
+    enemyGroups:
+    - EnemyName: Peasant
+      EnemyCount: 15
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 5150781104156124289, guid: c398f531ded992442af0154e7c6b6ac8,
+        type: 3}
+    - EnemyName: Peasant
+      EnemyCount: 7
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 5150781104156124289, guid: c398f531ded992442af0154e7c6b6ac8,
+        type: 3}
+    - EnemyName: Soldier
+      EnemyCount: 10
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 651668938019806308, guid: c28a66748acd3ce408548fe0e7df0d6d,
+        type: 3}
+    FalaQuota: 0
+    spawnIntereval: 1
+    spawnCount: 0
+  - NazwaFali: Fala 4
+    enemyGroups:
+    - EnemyName: Peasant
+      EnemyCount: 15
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 5150781104156124289, guid: c398f531ded992442af0154e7c6b6ac8,
+        type: 3}
+    - EnemyName: Peasant
+      EnemyCount: 5
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 5150781104156124289, guid: c398f531ded992442af0154e7c6b6ac8,
+        type: 3}
+    - EnemyName: Soldier
+      EnemyCount: 18
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 651668938019806308, guid: c28a66748acd3ce408548fe0e7df0d6d,
+        type: 3}
+    FalaQuota: 0
+    spawnIntereval: 1
+    spawnCount: 0
+  - NazwaFali: Fala 5
+    enemyGroups:
+    - EnemyName: Peasant
+      EnemyCount: 15
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 5150781104156124289, guid: c398f531ded992442af0154e7c6b6ac8,
+        type: 3}
+    - EnemyName: Soldier
+      EnemyCount: 7
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 651668938019806308, guid: c28a66748acd3ce408548fe0e7df0d6d,
+        type: 3}
+    - EnemyName: Soldier
+      EnemyCount: 10
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 651668938019806308, guid: c28a66748acd3ce408548fe0e7df0d6d,
+        type: 3}
+    FalaQuota: 0
+    spawnIntereval: 1
+    spawnCount: 0
+  - NazwaFali: Fala 6
+    enemyGroups:
+    - EnemyName: Peasant
+      EnemyCount: 15
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 5150781104156124289, guid: c398f531ded992442af0154e7c6b6ac8,
+        type: 3}
+    - EnemyName: Peasant
+      EnemyCount: 15
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 5150781104156124289, guid: c398f531ded992442af0154e7c6b6ac8,
+        type: 3}
+    - EnemyName: Prist
+      EnemyCount: 3
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 1804157035581125616, guid: e96aeee65258cea47996eece0f5de3a6,
+        type: 3}
+    FalaQuota: 0
+    spawnIntereval: 1
+    spawnCount: 0
+  - NazwaFali: Fala 7
+    enemyGroups:
+    - EnemyName: Peasant
+      EnemyCount: 15
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 5150781104156124289, guid: c398f531ded992442af0154e7c6b6ac8,
+        type: 3}
+    - EnemyName: Soldier
+      EnemyCount: 20
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 651668938019806308, guid: c28a66748acd3ce408548fe0e7df0d6d,
+        type: 3}
+    - EnemyName: Prist
+      EnemyCount: 5
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 1804157035581125616, guid: e96aeee65258cea47996eece0f5de3a6,
+        type: 3}
+    FalaQuota: 0
+    spawnIntereval: 1
+    spawnCount: 0
+  - NazwaFali: Fala 8
+    enemyGroups:
+    - EnemyName: Soldier
+      EnemyCount: 15
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 651668938019806308, guid: c28a66748acd3ce408548fe0e7df0d6d,
+        type: 3}
+    - EnemyName: Soldier
+      EnemyCount: 10
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 651668938019806308, guid: c28a66748acd3ce408548fe0e7df0d6d,
+        type: 3}
+    - EnemyName: Prist
+      EnemyCount: 8
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 1804157035581125616, guid: e96aeee65258cea47996eece0f5de3a6,
+        type: 3}
+    FalaQuota: 0
+    spawnIntereval: 1
+    spawnCount: 0
+  - NazwaFali: Fala 9
+    enemyGroups:
+    - EnemyName: Soldier
+      EnemyCount: 20
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 5150781104156124289, guid: c398f531ded992442af0154e7c6b6ac8,
+        type: 3}
+    - EnemyName: Prist
+      EnemyCount: 10
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 1804157035581125616, guid: e96aeee65258cea47996eece0f5de3a6,
+        type: 3}
+    - EnemyName: Knight
+      EnemyCount: 1
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 2725158672590557474, guid: 3d2ee59e39b2b7249b5b40441a4de469,
+        type: 3}
+    FalaQuota: 0
+    spawnIntereval: 1
+    spawnCount: 0
+  - NazwaFali: Fala 10
+    enemyGroups:
+    - EnemyName: Soldier
+      EnemyCount: 20
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 651668938019806308, guid: c28a66748acd3ce408548fe0e7df0d6d,
+        type: 3}
+    - EnemyName: Soldier
+      EnemyCount: 10
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 651668938019806308, guid: c28a66748acd3ce408548fe0e7df0d6d,
+        type: 3}
+    - EnemyName: Knight
+      EnemyCount: 2
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 2725158672590557474, guid: 3d2ee59e39b2b7249b5b40441a4de469,
+        type: 3}
+    FalaQuota: 0
+    spawnIntereval: 1
+    spawnCount: 0
+  - NazwaFali: Fala 11
+    enemyGroups:
+    - EnemyName: Prist
+      EnemyCount: 10
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 5150781104156124289, guid: c398f531ded992442af0154e7c6b6ac8,
+        type: 3}
+    - EnemyName: Peasant
+      EnemyCount: 7
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 5150781104156124289, guid: c398f531ded992442af0154e7c6b6ac8,
+        type: 3}
+    - EnemyName: Knight
+      EnemyCount: 3
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 2725158672590557474, guid: 3d2ee59e39b2b7249b5b40441a4de469,
+        type: 3}
+    FalaQuota: 0
+    spawnIntereval: 1
+    spawnCount: 0
+  - NazwaFali: Fala 12
+    enemyGroups:
+    - EnemyName: Soldier
+      EnemyCount: 15
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 651668938019806308, guid: c28a66748acd3ce408548fe0e7df0d6d,
+        type: 3}
+    - EnemyName: Peasant
+      EnemyCount: 15
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 1804157035581125616, guid: e96aeee65258cea47996eece0f5de3a6,
+        type: 3}
+    - EnemyName: Knight
+      EnemyCount: 5
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 2725158672590557474, guid: 3d2ee59e39b2b7249b5b40441a4de469,
+        type: 3}
+    FalaQuota: 0
+    spawnIntereval: 1
+    spawnCount: 0
+  - NazwaFali: Fala 13
+    enemyGroups:
+    - EnemyName: Prist
+      EnemyCount: 15
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 1804157035581125616, guid: e96aeee65258cea47996eece0f5de3a6,
+        type: 3}
+    - EnemyName: Soldier
+      EnemyCount: 7
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 651668938019806308, guid: c28a66748acd3ce408548fe0e7df0d6d,
+        type: 3}
+    - EnemyName: Soldier
+      EnemyCount: 8
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 2725158672590557474, guid: 3d2ee59e39b2b7249b5b40441a4de469,
+        type: 3}
+    FalaQuota: 0
+    spawnIntereval: 1
+    spawnCount: 0
+  - NazwaFali: Fala 14
+    enemyGroups:
+    - EnemyName: Knight
+      EnemyCount: 15
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 2725158672590557474, guid: 3d2ee59e39b2b7249b5b40441a4de469,
+        type: 3}
+    - EnemyName: Prist
+      EnemyCount: 7
+      SpawnCount: 0
+      enemyPrefabs: {fileID: 1804157035581125616, guid: e96aeee65258cea47996eece0f5de3a6,
+        type: 3}
+    FalaQuota: 0
+    spawnIntereval: 1
     spawnCount: 0
   obecnaFala: 0
-  waveInterval: 10
+  waveInterval: 20
   enemiesAlive: 0
-  maxEnemies: 50
+  maxEnemies: 120
   maxenenmiesReached: 0
   relativeSpawnPoints:
   - {fileID: 200082484}
@@ -8383,7 +8614,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 33b6cd7837c7642958dac012307e9086, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -8750,9 +8981,7 @@ MonoBehaviour:
   - {fileID: 656467081}
   - {fileID: 1246328104}
   - {fileID: 613864649}
-  weponUpgradeOptions:
-  - initialWeapon: {fileID: 0}
-    weaponData: {fileID: 0}
+  weaponUpgradeOptions: []
   passiveItemUpgradeOptions:
   - initialPassiveItem: {fileID: 0}
     passiveItemData: {fileID: 0}

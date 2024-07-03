@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dfacd51645bdbf4898709895d4d3d16, type: 3}
   m_Name: SpeedBoots lvl2
   m_EditorClassIdentifier: 
-  multipler: 75
+  multipler: 20
   level: 2
   nextLevelPrefab: {fileID: 0}
+  name: Speed Boots
+  description: Increses Speed by 20%
   icon: {fileID: -1572440586, guid: 83bf93558b0ec514a95bd6edcd67f7ac, type: 3}

@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dfacd51645bdbf4898709895d4d3d16, type: 3}
   m_Name: MagnetStaff
   m_EditorClassIdentifier: 
-  multipler: 25
+  multipler: 10
   level: 1
   nextLevelPrefab: {fileID: 8406713371686966153, guid: b5c17ebcbb9791d468e4423d891bfc3d,
     type: 3}
+  name: Magnet Staff
+  description: Pulls Items from further awey by 10%
   icon: {fileID: -528468509, guid: 83bf93558b0ec514a95bd6edcd67f7ac, type: 3}

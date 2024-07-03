@@ -680,6 +680,7 @@ MonoBehaviour:
   currentMoveSpeed: 0
   currentHP: 0
   currentDamage: 0
+  invincibilityDuration: 0.5
   despawnDistance: 20
 --- !u!114 &4491149421158795201
 MonoBehaviour:

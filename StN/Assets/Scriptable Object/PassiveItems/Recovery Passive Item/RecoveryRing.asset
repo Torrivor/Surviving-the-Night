@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dfacd51645bdbf4898709895d4d3d16, type: 3}
   m_Name: RecoveryRing
   m_EditorClassIdentifier: 
-  multipler: 100
+  multipler: 25
   level: 1
   nextLevelPrefab: {fileID: 6060062125766075308, guid: ed19ce918c96ac740ad29d20d51644b7,
     type: 3}
+  name: Recovery Ring
+  description: Incrises Hp Recovery by 25%
   icon: {fileID: 833187360, guid: 83bf93558b0ec514a95bd6edcd67f7ac, type: 3}

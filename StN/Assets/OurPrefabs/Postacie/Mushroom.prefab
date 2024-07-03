@@ -449,24 +449,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterData: {fileID: 11400000, guid: 4914f3a9187c74149899966bb0ae2aab, type: 2}
-  currentHP: 0
-  currentRecovery: 0
-  currentMoveSpeed: 0
-  currentMight: 0
-  currentProjectileSpeed: 0
-  currentMagnet: 0
-  spawnedWeapons: []
   experience: 0
   level: 1
   experienceCap: 0
   invincibilityDuration: 0.5
   levelRanges:
   - startLevel: 1
-    endLevel: 3
-    experienceCapIncrease: 150
-  - startLevel: 4
-    endLevel: 7
-    experienceCapIncrease: 300
+    endLevel: 4
+    experienceCapIncrease: 200
+  - startLevel: 5
+    endLevel: 10
+    experienceCapIncrease: 50
+  - startLevel: 11
+    endLevel: 17
+    experienceCapIncrease: 40
+  - startLevel: 18
+    endLevel: 25
+    experienceCapIncrease: 30
+  - startLevel: 26
+    endLevel: 50
+    experienceCapIncrease: 30
+  weaponIndex: 0
+  passiveItemIndex: 0
+  secondWeaponTest: {fileID: 0}
+  firstPassiveItemTest: {fileID: 0}
+  secondPassiveItemTest: {fileID: 0}
 --- !u!1 &8403497715851526739
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a712b4cda3e5d544eb00fbfdee3424f9, type: 3}
   m_Name: Knight - enemy
   m_EditorClassIdentifier: 
-  moveSpeed: 1.5
-  maxHP: 20
-  damage: 30
+  moveSpeed: 7.5
+  maxHP: 150
+  damage: 450
