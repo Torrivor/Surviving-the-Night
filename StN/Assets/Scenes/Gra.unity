@@ -7588,6 +7588,17 @@ MonoBehaviour:
   - {fileID: 656467081}
   - {fileID: 1246328104}
   - {fileID: 613864649}
+  weponUpgradeOptions:
+  - initialWeapon: {fileID: 0}
+    weaponData: {fileID: 0}
+  passiveItemUpgradeOptions:
+  - initialPassiveItem: {fileID: 0}
+    passiveItemData: {fileID: 0}
+  upgradeUIOptions:
+  - upgradeNameDisplay: {fileID: 0}
+    upgradeDescriptionDisplay: {fileID: 0}
+    upgradeIcon: {fileID: 0}
+    upgradeButton: {fileID: 0}
 --- !u!1001 &3323312983672540986
 PrefabInstance:
   m_ObjectHideFlags: 0
