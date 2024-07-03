@@ -52,6 +52,9 @@ public class GameManager : MonoBehaviour
     //znacznik sprawdzajacy czy gracz wybiera upgradea
     public bool choosingUpgrade;
 
+    //odniesienie do obiektu gracza
+    public GameObject playerObject;
+
     public void Awake()
     {
         //ostrzerzenie jesli jest jeszczejeden singleton tego typu w grze
@@ -242,6 +245,7 @@ public class GameManager : MonoBehaviour
     public void StartLevelUp()
     {
         ChangeState(GameState.LevelUp);
+        playerObject.SendMessage("RemoveAndApplyUpgrades");
     }
 
     public void EndLevelUp()
