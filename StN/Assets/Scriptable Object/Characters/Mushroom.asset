@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d6dc2a58d02de4c809741c40452199, type: 3}
   m_Name: Mushroom
   m_EditorClassIdentifier: 
+  icon: {fileID: -7008412969330441016, guid: 5cdfcef2d5ef97347a8d7935407f81ab, type: 3}
+  name: FunGay
   startingWeapon: {fileID: 6562127436923587339, guid: 7173ae27d4955284697b0901a8cf5091,
     type: 3}
   controller: {fileID: 22100000, guid: ddeab7a291729964c865ecdc93e0c665, type: 2}

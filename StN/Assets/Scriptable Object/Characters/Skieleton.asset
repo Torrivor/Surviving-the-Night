@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d6dc2a58d02de4c809741c40452199, type: 3}
   m_Name: Skieleton
   m_EditorClassIdentifier: 
+  icon: {fileID: -7008412969330441016, guid: 5f19f67e94a2e2f4ba57d2b338387c11, type: 3}
+  name: Skieleton
   startingWeapon: {fileID: 4046195172518820960, guid: a6edcf821313cbe46b9a88a8d684c9e1,
     type: 3}
   controller: {fileID: 9100000, guid: 29072297dc4a3194882d3ee4bbdcab67, type: 2}

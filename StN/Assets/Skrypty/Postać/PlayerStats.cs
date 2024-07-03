@@ -195,6 +195,7 @@ public class PlayerStats : MonoBehaviour
         GameManager.instance.currentProjectileSpeedDisplay.text = "Projectile Speed: " + currentProjectileSpeed;
         GameManager.instance.currentMagnetDisplay.text = "Magnet: " + currentMagnet;
 
+        GameManager.instance.AssignChosenCharacterUI(characterData);
     }
 
     void Update()
@@ -234,6 +235,8 @@ public class PlayerStats : MonoBehaviour
                 }
             }
             experienceCap += experienceCapIncrease;
+
+            GameManager.instance.StartLevelUp();
         }
     }
 
@@ -261,6 +264,8 @@ public class PlayerStats : MonoBehaviour
         if(!GameManager.instance.isKoniec_Gry)
         {
             GameManager.instance.Koniec_Gry();
+            GameManager.instance.AssignLevelReachedUI(level);
+            GameManager.instance.AssignChosenWeaponAndPassiveItemUI(inventory.weaponUISlots, inventory.passiveItemUISlots);
         }
     }
 
