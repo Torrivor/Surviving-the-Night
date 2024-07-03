@@ -12,6 +12,28 @@ public class InventoryManager : MonoBehaviour
     public int[] passiveItemLevels = new int[6];
     public List<Image> passiveItemUISlots = new List<Image>(6);
 
+    [System.Serializable]
+    public class WeaponUpgrade
+    {
+        public GameObject initialWeapon;
+        public WeaponsScriptableObject weaponData;
+    }
+
+    [System.Serializable]
+    public class PassiveItemUpgrade
+    {
+        public GameObject initialPassiveItem;
+        public PassiveItemScriptableObject passiveItemData;
+    }
+
+    [System.Serializable]
+    public class UpgradeUI
+    {
+        public Text upgradeNameDisplay;
+        public Text upgradeDescriptionDisplay;
+        public Image upgradeIcon;
+        public Button upgradeButton;
+    }
 
     public void AddWeapon(int slotIndex, Weapons weapon)
     {
