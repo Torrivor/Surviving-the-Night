@@ -15,7 +15,8 @@ GameObject:
   - component: {fileID: -3973889716067187588}
   - component: {fileID: 491505325095617617}
   - component: {fileID: -6854236294787932075}
-  m_Layer: 0
+  - component: {fileID: 1842204925247581060}
+  m_Layer: 7
   m_Name: Soldier
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -110,7 +111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6e21ab78be17d46944b1e126bc829a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyData: {fileID: 11400000, guid: 65f467f7491d37349830b7e908d0fd82, type: 2}
   Skeleton: {fileID: 0}
   facingRight: 0
 --- !u!61 &491505325095617617
@@ -171,6 +171,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyData: {fileID: 11400000, guid: 65f467f7491d37349830b7e908d0fd82, type: 2}
+  currentMoveSpeed: 0
+  currentHP: 0
+  currentDamage: 0
+  despawnDistance: 20
+--- !u!114 &1842204925247581060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651668938019806308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838c133f6237eda498bb27f0dea19184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drops:
+  - name: Exp
+    itemPrefab: {fileID: 2676791569975515585, guid: bdb41e484d320f848ac2cc4250505d83,
+      type: 3}
+    dropRate: 100
 --- !u!1 &2120399822609676073
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2493371902635907730}
   - component: {fileID: 141755982306245496}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,7 +286,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7168459104644404594}
   - component: {fileID: 5041094846675752600}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Front leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +370,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1769741602032065336}
   - component: {fileID: 8181466297126955707}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Front arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -434,7 +455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1475551638939976304}
   - component: {fileID: 3611417012996178744}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -518,7 +539,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3852009206163728498}
   - component: {fileID: 1547717868422411671}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -607,7 +628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7645912545552079819}
   - component: {fileID: 5308837294710887135}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Back arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -691,7 +712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5607880004119002719}
   - component: {fileID: 6217277755116583709}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Back leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}

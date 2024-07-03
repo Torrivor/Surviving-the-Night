@@ -521,6 +521,7 @@ GameObject:
   - component: {fileID: 7608668489747171673}
   - component: {fileID: -8062772784519082832}
   - component: {fileID: 7721297526728201081}
+  - component: {fileID: 4491149421158795201}
   m_Layer: 7
   m_Name: Peasant
   m_TagString: Enemy
@@ -680,6 +681,23 @@ MonoBehaviour:
   currentHP: 0
   currentDamage: 0
   despawnDistance: 20
+--- !u!114 &4491149421158795201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5150781104156124289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838c133f6237eda498bb27f0dea19184, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drops:
+  - name: Exp
+    itemPrefab: {fileID: 2676791569975515585, guid: bdb41e484d320f848ac2cc4250505d83,
+      type: 3}
+    dropRate: 100
 --- !u!1 &7195532566378155330
 GameObject:
   m_ObjectHideFlags: 0
