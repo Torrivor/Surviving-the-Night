@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   multipler: 40
   level: 4
-  nextLevelPrefab: {fileID: 0}
-  name: Speed Boots
+  nextLevelPrefab: {fileID: 5401294330412881753, guid: a3725d855a7ecac4395d715a37981d58,
+    type: 3}
+  name: Speed Boots 4
   description: Increses Speed by 40%
   icon: {fileID: -1572440586, guid: 83bf93558b0ec514a95bd6edcd67f7ac, type: 3}

@@ -170,9 +170,9 @@ public class PlayerStats : MonoBehaviour
 
         //Spawn broni
         SpawnWeapon(characterData.StartingWeapon);
-        SpawnWeapon(secondWeaponTest);
-        SpawnPassiveItem(firstPassiveItemTest);
-        SpawnPassiveItem(secondPassiveItemTest);
+        //SpawnWeapon(secondWeaponTest);
+        //SpawnPassiveItem(firstPassiveItemTest);
+        //SpawnPassiveItem(secondPassiveItemTest);
 
         playerAnimator = GetComponent<SkeletonAnimator>();
         if (characterData.controller)

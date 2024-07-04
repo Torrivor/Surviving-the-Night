@@ -19,7 +19,7 @@ MonoBehaviour:
   controller: {fileID: 9100000, guid: 29072297dc4a3194882d3ee4bbdcab67, type: 2}
   maxHP: 500
   recovery: 0.2
-  moveSpeed: 2.5
+  moveSpeed: 3
   might: 1
   projectileSpeed: 1
   magnet: 1.6

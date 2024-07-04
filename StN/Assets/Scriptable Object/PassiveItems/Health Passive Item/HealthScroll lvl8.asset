@@ -15,6 +15,6 @@ MonoBehaviour:
   multipler: 500
   level: 8
   nextLevelPrefab: {fileID: 0}
-  name: HealthScroll
+  name: HealthScroll 8
   description: Incrise max Hp by 500%
   icon: {fileID: 1589317374, guid: ba00d2cc9cfe3aa4dbabe584112b29a8, type: 3}

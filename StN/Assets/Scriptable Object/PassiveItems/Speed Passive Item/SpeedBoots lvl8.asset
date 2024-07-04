@@ -15,6 +15,6 @@ MonoBehaviour:
   multipler: 100
   level: 8
   nextLevelPrefab: {fileID: 0}
-  name: Speed Boots
+  name: Speed Boots 8
   description: Increses Speed by 100%
   icon: {fileID: -1572440586, guid: 83bf93558b0ec514a95bd6edcd67f7ac, type: 3}

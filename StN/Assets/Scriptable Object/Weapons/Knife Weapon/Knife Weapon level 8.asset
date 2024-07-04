@@ -19,6 +19,6 @@ MonoBehaviour:
   wytrzymalosc: 3
   level: 8
   nextLevelPrefab: {fileID: 0}
-  name: Knife
+  name: Knife 8
   description: Stronger and Sharper Trowable Weapon
   icon: {fileID: -1904671848, guid: 83bf93558b0ec514a95bd6edcd67f7ac, type: 3}

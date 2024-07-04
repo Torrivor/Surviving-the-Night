@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd7b6af6aac76af40a6b0b2e90c5284c, type: 3}
   m_Name: Garlic Weapon lvl 2
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4801957982050906767, guid: 363daf32d4595e344a70b769aaf449af, type: 3}
-  damage: 10
+  prefab: {fileID: 4801957982050906767, guid: d884646fc23cf584cb82f685be0fb01c, type: 3}
+  damage: 7.5
   speed: 0
-  cooldownofweapon: 2.5
+  cooldownofweapon: 3
   wytrzymalosc: 0
   level: 2
   nextLevelPrefab: {fileID: 4046195172518820960, guid: 9dfaeba1c1c1cc449b7fda9d78683f8c,
     type: 3}
-  name: Shield
+  name: Shield 2
   description: Damage Enemis around player
   icon: {fileID: 2130171591, guid: ba00d2cc9cfe3aa4dbabe584112b29a8, type: 3}

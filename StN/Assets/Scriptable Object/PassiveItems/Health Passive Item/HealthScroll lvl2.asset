@@ -16,6 +16,6 @@ MonoBehaviour:
   level: 2
   nextLevelPrefab: {fileID: 4993691970328534864, guid: b3d5c6b73d1445342af9b7c94caac925,
     type: 3}
-  name: HealthScroll
+  name: HealthScroll 2
   description: Incrise max Hp by 50%
   icon: {fileID: 1589317374, guid: ba00d2cc9cfe3aa4dbabe584112b29a8, type: 3}

@@ -15,6 +15,6 @@ MonoBehaviour:
   multipler: 150
   level: 8
   nextLevelPrefab: {fileID: 0}
-  name: Magnet Staff
+  name: Magnet Staff 8
   description: Pulls Items from further awey by 150%
   icon: {fileID: -528468509, guid: 83bf93558b0ec514a95bd6edcd67f7ac, type: 3}

@@ -15,6 +15,6 @@ MonoBehaviour:
   multipler: 300
   level: 8
   nextLevelPrefab: {fileID: 0}
-  name: Mighty Ring
+  name: Mighty Ring 8
   description: Incrises Might of yours atacks by 300%
   icon: {fileID: 273881594, guid: 83bf93558b0ec514a95bd6edcd67f7ac, type: 3}

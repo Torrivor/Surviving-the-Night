@@ -16,6 +16,6 @@ MonoBehaviour:
   level: 4
   nextLevelPrefab: {fileID: 8406713371686966153, guid: 8536be6038154f447b3b3634d9172631,
     type: 3}
-  name: Magnet Staff
+  name: Magnet Staff 4
   description: Pulls Items from further awey by 40%
   icon: {fileID: -528468509, guid: 83bf93558b0ec514a95bd6edcd67f7ac, type: 3}
